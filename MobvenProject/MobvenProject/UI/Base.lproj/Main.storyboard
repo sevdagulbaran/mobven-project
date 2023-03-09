@@ -1,24 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Setup Account View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SetupAccountViewController" customModule="MobvenProjectDev" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackroundShapeImage" translatesAutoresizingMaskIntoConstraints="NO" id="2Un-Xd-OK2">
+                                <rect key="frame" x="-50" y="419" width="549" height="433"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="433" id="MZD-aK-VCY"/>
+                                    <constraint firstAttribute="width" constant="549" id="PwQ-gu-0xg"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setup Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3NP-mS-Sxt">
+                                <rect key="frame" x="30" y="159" width="333" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="BQb-aU-qNe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="28"/>
+                                <color key="textColor" name="Blue-Dark"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fill your account information below" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adL-cd-fDv">
+                                <rect key="frame" x="30" y="214" width="333" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="g5G-qF-7kC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
+                                <color key="textColor" name="Blue-Light"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="TcK-0L-mDN">
+                                <rect key="frame" x="128" y="284" width="137" height="137"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="TcK-0L-mDN" secondAttribute="height" multiplier="1:1" id="U87-eZ-USM"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1p9-cf-9N7">
+                                <rect key="frame" x="30" y="441" width="37" height="14.666666666666686"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XXk-Pr-Mgp">
+                                <rect key="frame" x="30" y="462.66666666666669" width="333" height="50.000000000000057"/>
+                                <color key="backgroundColor" name="Purple-Soft"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="OY0-MI-vq7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPf-y2-Mmk">
+                                <rect key="frame" x="303" y="728" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="IEF-Nj-9I4"/>
+                                    <constraint firstAttribute="width" constant="60" id="WXZ-qD-Q83"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="SaveButtonIcon"/>
+                                <connections>
+                                    <action selector="saveAccountInformationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g2S-6T-hfz"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1p9-cf-9N7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="1fX-rh-kIF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XXk-Pr-Mgp" secondAttribute="trailing" constant="30" id="3a2-os-Vfn"/>
+                            <constraint firstItem="2Un-Xd-OK2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-50" id="4Q3-6t-kwa"/>
+                            <constraint firstAttribute="bottom" secondItem="2Un-Xd-OK2" secondAttribute="bottom" id="8RI-Ia-XXN"/>
+                            <constraint firstItem="adL-cd-fDv" firstAttribute="top" secondItem="3NP-mS-Sxt" secondAttribute="bottom" constant="13" id="F0A-nf-JM5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZPf-y2-Mmk" secondAttribute="trailing" constant="30" id="Hl4-xl-hH6"/>
+                            <constraint firstItem="TcK-0L-mDN" firstAttribute="top" secondItem="adL-cd-fDv" secondAttribute="bottom" constant="50" id="Hze-X3-gNN"/>
+                            <constraint firstItem="3NP-mS-Sxt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="Qfp-n8-frj"/>
+                            <constraint firstItem="1p9-cf-9N7" firstAttribute="top" secondItem="TcK-0L-mDN" secondAttribute="bottom" constant="20" id="Soy-I8-g2y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="adL-cd-fDv" secondAttribute="trailing" constant="30" id="TMi-Fq-duj"/>
+                            <constraint firstItem="adL-cd-fDv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Tgf-HO-Sf4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3NP-mS-Sxt" secondAttribute="trailing" constant="30" id="UbU-ZY-xaV"/>
+                            <constraint firstItem="XXk-Pr-Mgp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="fEQ-gh-sin"/>
+                            <constraint firstItem="TcK-0L-mDN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="128" id="hRm-rg-9nm"/>
+                            <constraint firstAttribute="trailing" secondItem="2Un-Xd-OK2" secondAttribute="trailing" constant="-106" id="hV8-LY-23O"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TcK-0L-mDN" secondAttribute="trailing" constant="128" id="k1b-hM-E54"/>
+                            <constraint firstItem="2Un-Xd-OK2" firstAttribute="top" secondItem="adL-cd-fDv" secondAttribute="bottom" constant="185" id="mkX-ly-D2Q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZPf-y2-Mmk" secondAttribute="bottom" constant="30" id="oJ1-UN-gAH"/>
+                            <constraint firstItem="XXk-Pr-Mgp" firstAttribute="top" secondItem="1p9-cf-9N7" secondAttribute="bottom" constant="7" id="oiI-IM-zHm"/>
+                            <constraint firstItem="3NP-mS-Sxt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="vW7-Xd-pzV"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mainTitleLabel" destination="3NP-mS-Sxt" id="IRa-4c-ZQs"/>
+                        <outlet property="nameLabel" destination="1p9-cf-9N7" id="zkv-JV-yJy"/>
+                        <outlet property="nameTextField" destination="XXk-Pr-Mgp" id="HJ0-BG-X3D"/>
+                        <outlet property="profileImageView" destination="TcK-0L-mDN" id="2T2-fd-OEh"/>
+                        <outlet property="saveButton" destination="ZPf-y2-Mmk" id="PE1-NC-E2F"/>
+                        <outlet property="subTitleLabel" destination="adL-cd-fDv" id="ZgW-qL-jEV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-553.43511450381675" y="-13.380281690140846"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BackroundShapeImage" width="375" height="470"/>
+        <image name="ProfileImage" width="120" height="120"/>
+        <image name="SaveButtonIcon" width="120" height="107"/>
+        <namedColor name="Blue-Dark">
+            <color red="0.10196078431372549" green="0.066666666666666666" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Blue-Light">
+            <color red="0.52156862745098043" green="0.49803921568627452" blue="0.70588235294117652" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Purple-Soft">
+            <color red="0.96078431372549022" green="0.95686274509803926" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
