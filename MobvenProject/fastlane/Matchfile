@@ -1,4 +1,4 @@
-git_url("https://github.com/sevdagulbaran/mobven-project.git")
+git_url("https://github.com/cemeke1/YoungTalentCertificates23")
 
 storage_mode("git")
 
