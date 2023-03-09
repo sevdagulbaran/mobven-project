@@ -16,6 +16,8 @@
 		52939831298FC848006D5060 /* MobvenProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52939830298FC848006D5060 /* MobvenProjectTests.swift */; };
 		5293983B298FC848006D5060 /* MobvenProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5293983A298FC848006D5060 /* MobvenProjectUITests.swift */; };
 		5293983D298FC848006D5060 /* MobvenProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5293983C298FC848006D5060 /* MobvenProjectUITestsLaunchTests.swift */; };
+		52FB8CE429B744610021D809 /* SetupAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FB8CE329B744610021D809 /* SetupAccountViewController.swift */; };
+		52FB8CE629B74BDB0021D809 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52FB8CE529B74BDB0021D809 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,11 @@
 		5293983C298FC848006D5060 /* MobvenProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobvenProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5293984A298FC874006D5060 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		5293984B298FC893006D5060 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		52FB8CE329B744610021D809 /* SetupAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAccountViewController.swift; sourceTree = "<group>"; };
+		52FB8CE529B74BDB0021D809 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		52FB8CEF29B786010021D809 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Medium.ttf"; path = "../../../../../../../Downloads/Montserrat/static/Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		52FB8CF029B786010021D809 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Regular.ttf"; path = "../../../../../../../Downloads/Montserrat/static/Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		52FB8CF229B786010021D809 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Bold.ttf"; path = "../../../../../../../Downloads/Montserrat/static/Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				52939857298FD0BA006D5060 /* UI */,
-				52939856298FD047006D5060 /* Scene */,
+				52939856298FD047006D5060 /* Scenes */,
 				52939855298FD033006D5060 /* Resources */,
 				52939854298FD01E006D5060 /* SupportingFiles */,
 				52939827298FC847006D5060 /* Info.plist */,
@@ -149,17 +156,20 @@
 		52939855298FD033006D5060 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				52FB8CE729B785810021D809 /* Fonts */,
 				52939822298FC847006D5060 /* Assets.xcassets */,
+				52FB8CE529B74BDB0021D809 /* Colors.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		52939856298FD047006D5060 /* Scene */ = {
+		52939856298FD047006D5060 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
 				5293981D298FC845006D5060 /* ViewController.swift */,
+				52FB8CE329B744610021D809 /* SetupAccountViewController.swift */,
 			);
-			path = Scene;
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		52939857298FD0BA006D5060 /* UI */ = {
@@ -169,6 +179,16 @@
 				52939824298FC847006D5060 /* LaunchScreen.storyboard */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		52FB8CE729B785810021D809 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				52FB8CF229B786010021D809 /* Montserrat-Bold.ttf */,
+				52FB8CEF29B786010021D809 /* Montserrat-Medium.ttf */,
+				52FB8CF029B786010021D809 /* Montserrat-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52939826298FC847006D5060 /* LaunchScreen.storyboard in Resources */,
+				52FB8CE629B74BDB0021D809 /* Colors.xcassets in Resources */,
 				52939823298FC847006D5060 /* Assets.xcassets in Resources */,
 				52939821298FC845006D5060 /* Main.storyboard in Resources */,
 			);
@@ -302,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52FB8CE429B744610021D809 /* SetupAccountViewController.swift in Sources */,
 				5293981E298FC845006D5060 /* ViewController.swift in Sources */,
 				5293981A298FC845006D5060 /* AppDelegate.swift in Sources */,
 				5293981C298FC845006D5060 /* SceneDelegate.swift in Sources */,
@@ -411,7 +433,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -466,7 +488,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -665,7 +687,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -789,7 +811,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
