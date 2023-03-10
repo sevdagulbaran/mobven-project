@@ -9,14 +9,18 @@
 /* Begin PBXBuildFile section */
 		5293981A298FC845006D5060 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52939819298FC845006D5060 /* AppDelegate.swift */; };
 		5293981C298FC845006D5060 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5293981B298FC845006D5060 /* SceneDelegate.swift */; };
-		5293981E298FC845006D5060 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5293981D298FC845006D5060 /* ViewController.swift */; };
 		52939821298FC845006D5060 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5293981F298FC845006D5060 /* Main.storyboard */; };
 		52939823298FC847006D5060 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52939822298FC847006D5060 /* Assets.xcassets */; };
 		52939826298FC847006D5060 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52939824298FC847006D5060 /* LaunchScreen.storyboard */; };
 		52939831298FC848006D5060 /* MobvenProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52939830298FC848006D5060 /* MobvenProjectTests.swift */; };
 		5293983B298FC848006D5060 /* MobvenProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5293983A298FC848006D5060 /* MobvenProjectUITests.swift */; };
 		5293983D298FC848006D5060 /* MobvenProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5293983C298FC848006D5060 /* MobvenProjectUITestsLaunchTests.swift */; };
-		52FB8CE429B744610021D809 /* SetupAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FB8CE329B744610021D809 /* SetupAccountViewController.swift */; };
+		52E21F3B29BA83240086553E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E21F3A29BA83240086553E /* WelcomeViewController.swift */; };
+		52E21F3D29BA8AD50086553E /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52FB8CF229B786010021D809 /* Montserrat-Bold.ttf */; };
+		52E21F3E29BA8ADC0086553E /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52FB8CEF29B786010021D809 /* Montserrat-Medium.ttf */; };
+		52E21F3F29BA8B010086553E /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52FB8CF029B786010021D809 /* Montserrat-Regular.ttf */; };
+		52E21F4129BA9A450086553E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E21F4029BA9A450086553E /* LoginViewController.swift */; };
+		52FB8CE429B744610021D809 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FB8CE329B744610021D809 /* RegisterViewController.swift */; };
 		52FB8CE629B74BDB0021D809 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52FB8CE529B74BDB0021D809 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +45,6 @@
 		52939816298FC845006D5060 /* MobvenProjectDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobvenProjectDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52939819298FC845006D5060 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5293981B298FC845006D5060 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5293981D298FC845006D5060 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		52939820298FC845006D5060 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52939822298FC847006D5060 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52939825298FC847006D5060 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,7 +56,9 @@
 		5293983C298FC848006D5060 /* MobvenProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobvenProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5293984A298FC874006D5060 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		5293984B298FC893006D5060 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
-		52FB8CE329B744610021D809 /* SetupAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAccountViewController.swift; sourceTree = "<group>"; };
+		52E21F3A29BA83240086553E /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		52E21F4029BA9A450086553E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		52FB8CE329B744610021D809 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		52FB8CE529B74BDB0021D809 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		52FB8CEF29B786010021D809 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Medium.ttf"; path = "../../../../../../../Downloads/Montserrat/static/Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		52FB8CF029B786010021D809 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Regular.ttf"; path = "../../../../../../../Downloads/Montserrat/static/Montserrat-Regular.ttf"; sourceTree = "<group>"; };
@@ -166,8 +171,9 @@
 		52939856298FD047006D5060 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				5293981D298FC845006D5060 /* ViewController.swift */,
-				52FB8CE329B744610021D809 /* SetupAccountViewController.swift */,
+				52E21F4229BA9A4F0086553E /* Login */,
+				52E21F3829BA82EC0086553E /* Welcome */,
+				52E21F3729BA82E20086553E /* Register */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -179,6 +185,30 @@
 				52939824298FC847006D5060 /* LaunchScreen.storyboard */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		52E21F3729BA82E20086553E /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				52FB8CE329B744610021D809 /* RegisterViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		52E21F3829BA82EC0086553E /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				52E21F3A29BA83240086553E /* WelcomeViewController.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		52E21F4229BA9A4F0086553E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				52E21F4029BA9A450086553E /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		52FB8CE729B785810021D809 /* Fonts */ = {
@@ -295,9 +325,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52E21F3D29BA8AD50086553E /* Montserrat-Bold.ttf in Resources */,
 				52939826298FC847006D5060 /* LaunchScreen.storyboard in Resources */,
+				52E21F3F29BA8B010086553E /* Montserrat-Regular.ttf in Resources */,
 				52FB8CE629B74BDB0021D809 /* Colors.xcassets in Resources */,
 				52939823298FC847006D5060 /* Assets.xcassets in Resources */,
+				52E21F3E29BA8ADC0086553E /* Montserrat-Medium.ttf in Resources */,
 				52939821298FC845006D5060 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,9 +356,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52FB8CE429B744610021D809 /* SetupAccountViewController.swift in Sources */,
-				5293981E298FC845006D5060 /* ViewController.swift in Sources */,
+				52FB8CE429B744610021D809 /* RegisterViewController.swift in Sources */,
+				52E21F3B29BA83240086553E /* WelcomeViewController.swift in Sources */,
 				5293981A298FC845006D5060 /* AppDelegate.swift in Sources */,
+				52E21F4129BA9A450086553E /* LoginViewController.swift in Sources */,
 				5293981C298FC845006D5060 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

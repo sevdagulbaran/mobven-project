@@ -1,5 +1,5 @@
 //
-//  SetupAccountViewController.swift
+//  RegisterViewController.swift
 //  MobvenProject
 //
 //  Created by Sevda Gul Baran on 7.03.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class SetupAccountViewController: UIViewController {
+final class RegisterViewController: UIViewController {
     
     // MARK: - Properties
     
@@ -53,7 +53,7 @@ final class SetupAccountViewController: UIViewController {
 
 // MARK: - UITextFieldDelegate
 
-extension SetupAccountViewController: UITextFieldDelegate {
+extension RegisterViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         saveAccountInformationTapped(saveButton)
