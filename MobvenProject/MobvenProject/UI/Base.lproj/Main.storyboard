@@ -151,16 +151,12 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="RegisterViewController" id="BYZ-38-t0r" customClass="RegisterViewController" customModule="MobvenProjectDev" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackroundShapeImage" translatesAutoresizingMaskIntoConstraints="NO" id="2Un-Xd-OK2">
-                                <rect key="frame" x="-50" y="463" width="549" height="433"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="433" id="MZD-aK-VCY"/>
-                                    <constraint firstAttribute="width" constant="549" id="PwQ-gu-0xg"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="348" width="393" height="470"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setup Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3NP-mS-Sxt">
                                 <rect key="frame" x="30" y="203" width="333" height="42"/>
@@ -201,7 +197,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPf-y2-Mmk">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPf-y2-Mmk">
                                 <rect key="frame" x="303" y="728" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="IEF-Nj-9I4"/>
@@ -219,10 +215,11 @@
                         <constraints>
                             <constraint firstItem="1p9-cf-9N7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="1fX-rh-kIF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XXk-Pr-Mgp" secondAttribute="trailing" constant="30" id="3a2-os-Vfn"/>
-                            <constraint firstItem="2Un-Xd-OK2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-50" id="4Q3-6t-kwa"/>
-                            <constraint firstAttribute="bottom" secondItem="2Un-Xd-OK2" secondAttribute="bottom" id="8RI-Ia-XXN"/>
                             <constraint firstItem="adL-cd-fDv" firstAttribute="top" secondItem="3NP-mS-Sxt" secondAttribute="bottom" constant="13" id="F0A-nf-JM5"/>
                             <constraint firstItem="TcK-0L-mDN" firstAttribute="top" secondItem="adL-cd-fDv" secondAttribute="bottom" constant="50" id="Hze-X3-gNN"/>
+                            <constraint firstItem="2Un-Xd-OK2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="LDP-Sr-V0K"/>
+                            <constraint firstItem="2Un-Xd-OK2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LsA-El-SIQ"/>
+                            <constraint firstItem="2Un-Xd-OK2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QUx-6C-Xg9"/>
                             <constraint firstItem="3NP-mS-Sxt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="Qfp-n8-frj"/>
                             <constraint firstItem="1p9-cf-9N7" firstAttribute="top" secondItem="TcK-0L-mDN" secondAttribute="bottom" constant="20" id="Soy-I8-g2y"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="adL-cd-fDv" secondAttribute="trailing" constant="30" id="TMi-Fq-duj"/>
@@ -230,10 +227,8 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3NP-mS-Sxt" secondAttribute="trailing" constant="30" id="UbU-ZY-xaV"/>
                             <constraint firstItem="XXk-Pr-Mgp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="fEQ-gh-sin"/>
                             <constraint firstItem="TcK-0L-mDN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="128" id="hRm-rg-9nm"/>
-                            <constraint firstAttribute="trailing" secondItem="2Un-Xd-OK2" secondAttribute="trailing" constant="-106" id="hV8-LY-23O"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TcK-0L-mDN" secondAttribute="trailing" constant="128" id="k1b-hM-E54"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZPf-y2-Mmk" secondAttribute="trailing" constant="14" id="kuo-ku-qr4"/>
-                            <constraint firstItem="2Un-Xd-OK2" firstAttribute="top" secondItem="adL-cd-fDv" secondAttribute="bottom" constant="185" id="mkX-ly-D2Q"/>
                             <constraint firstItem="XXk-Pr-Mgp" firstAttribute="top" secondItem="1p9-cf-9N7" secondAttribute="bottom" constant="7" id="oiI-IM-zHm"/>
                             <constraint firstAttribute="bottomMargin" secondItem="ZPf-y2-Mmk" secondAttribute="bottom" constant="30" id="ro0-U5-dcO"/>
                             <constraint firstItem="3NP-mS-Sxt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="vW7-Xd-pzV"/>
@@ -251,7 +246,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1321" y="453"/>
+            <point key="canvasLocation" x="1316.793893129771" y="452.81690140845075"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rf4-le-MtI">

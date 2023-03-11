@@ -20,22 +20,38 @@ final class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let mode = UserDefaults.standard.string(forKey: "appMode")
+        if mode == "dark" {
+            overrideUserInterfaceStyle = .dark
+            modeSwitch.setOn(true, animated: false)
+        } else {
+            overrideUserInterfaceStyle = .light
+            modeSwitch.setOn(false, animated: false)
+        }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(interfaceStyleChanged), name: UIAccessibility.reduceTransparencyStatusDidChangeNotification, object: nil)
     }
     
     //MARK: - Actions
     
     @IBAction private func changeModeTapped(_ sender: UISwitch) {
-        UserDefaults.standard.set(sender.isOn, forKey: "isMode")
-        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
-            let windows = windowScene.windows
-            for window in windows {
-                if window.traitCollection.userInterfaceStyle == .dark {
-                    sender.isOn = false
-                } else {
-                    sender.isOn = true
-                }
-                window.overrideUserInterfaceStyle = sender.isOn ? .dark : .light
-            }
+        if sender.isOn {
+            overrideUserInterfaceStyle = .dark
+            UserDefaults.standard.setValue("dark", forKey: "appMode")
+        } else {
+            overrideUserInterfaceStyle = .light
+            UserDefaults.standard.setValue("light", forKey: "appMode")
+        }
+    }
+    
+    //MARK: - Notification
+    
+    @objc  func interfaceStyleChanged() {
+        let mode = UserDefaults.standard.string(forKey: "appMode")
+        if mode == "dark" {
+            modeSwitch.setOn(true, animated: true)
+        } else {
+            modeSwitch.setOn(false, animated: true)
         }
     }
     
