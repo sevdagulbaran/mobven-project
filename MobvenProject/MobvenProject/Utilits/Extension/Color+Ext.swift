@@ -9,28 +9,17 @@ import UIKit
 
 extension UIColor {
     
-    class func rgb(fromHex: Int) -> UIColor {
-        
-        let red =   CGFloat((fromHex & 0xFF0000) >> 16) / 0xFF
-        let green = CGFloat((fromHex & 0x00FF00) >> 8) / 0xFF
-        let blue =  CGFloat(fromHex & 0x0000FF) / 0xFF
-        let alpha = CGFloat(1.0)
-        
-        return UIColor(red: red, green: green, blue: blue, alpha: alpha)
-    }
-    
-    public static let blueDark: UIColor = {
-        
-        if #available(iOS 13, *) {
-            return UIColor { (UITraitCollection: UITraitCollection) -> UIColor in
-                if UITraitCollection.userInterfaceStyle == .dark {
-                    return rgb(fromHex: 0xE5E3FC)
-                } else {
-                    return rgb(fromHex: 0x1A1167)
-                }
-            }
-        } else {
-            return rgb(fromHex: 0x5E3FC)
-        }
-    }()
+    static let blueLight = UIColor(named: "Blue-Light")
+    static let blueDark = UIColor(named: "Blue-Dark")
+    static let customBlue = UIColor(named: "Blue")
+    static let customGreen = UIColor(named: "Green")
+    static let lime = UIColor(named: "Lime")
+    static let customOrange = UIColor(named: "Orange")
+    static let purpleLight = UIColor(named: "Purple-Light")
+    static let purpleSoft = UIColor(named: "Purple-Soft")
+    static let customPurple = UIColor(named: "Purple")
+    static let customRed = UIColor(named: "Red")
+    static let skyBlue = UIColor(named: "Sky-Blue")
+    static let customWhite = UIColor(named: "White")
+    static let customYellow = UIColor(named: "Yellow")
 }
