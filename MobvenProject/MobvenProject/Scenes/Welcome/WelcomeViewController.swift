@@ -19,11 +19,15 @@ final class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureBackButtonTitle("")
+        setupUI()
         storedMode()
     }
     
     // MARK: - Private Methods
+    
+    private func setupUI() {
+        configureBackButtonTitle("")
+    }
     
     private func storedMode() {
         guard let isMode = UserDefaults.standard.object(forKey: "isDarkMode") as? Bool else { return }
