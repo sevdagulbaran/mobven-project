@@ -26,28 +26,18 @@ final class WelcomeViewController: UIViewController {
     // MARK: - Private Methods
     
     private func storedMode() {
-        let mode = UserDefaults.standard.string(forKey: "appMode")
-        if mode == "dark" {
-            overrideUserInterfaceStyle = .dark
-            modeSwitch.setOn(true, animated: false)
-        } else {
-            overrideUserInterfaceStyle = .light
-            modeSwitch.setOn(false, animated: false)
-        }
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(interfaceStyleChanged), name: UIAccessibility.reduceTransparencyStatusDidChangeNotification, object: nil)
+        guard let isMode = UserDefaults.standard.object(forKey: "isDarkMode") as? Bool else { return }
+        modeSwitch.isOn = isMode
     }
     
     //MARK: - Actions
     
     @IBAction private func changeModeTapped(_ sender: UISwitch) {
-        if sender.isOn {
-            overrideUserInterfaceStyle = .dark
-            UserDefaults.standard.setValue("dark", forKey: "appMode")
-        } else {
-            overrideUserInterfaceStyle = .light
-            UserDefaults.standard.setValue("light", forKey: "appMode")
-        }
+           UserDefaults.standard.set(sender.isOn, forKey: "isDarkMode")
+        if let windowScene = UIApplication.shared.connectedScenes.map({ $0 as? UIWindowScene }).first,
+           let window = windowScene?.windows.first {
+                window.overrideUserInterfaceStyle = sender.isOn ? .dark: .light
+            }
     }
     
     @IBAction private func goToSignIn(_ sender: UIButton) {
@@ -66,16 +56,5 @@ final class WelcomeViewController: UIViewController {
             return
         }
         navigationController?.pushViewController(viewController, animated: true)
-    }
-    
-    //MARK: - Notification
-    
-    @objc  func interfaceStyleChanged() {
-        let mode = UserDefaults.standard.string(forKey: "appMode")
-        if mode == "dark" {
-            modeSwitch.setOn(true, animated: true)
-        } else {
-            modeSwitch.setOn(false, animated: true)
-        }
     }
 }
