@@ -7,23 +7,47 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
-
+final class LoginViewController: UIViewController {
+    
+    // MARK: - Properties
+    
+    @IBOutlet private weak var phoneNumberTextField: UITextField!
+    @IBOutlet private weak var termsLabel: UILabel!
+    @IBOutlet private weak var saveButton: UIButton!
+    
+    //MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .cyan
+        configureBackButtonTitle("")
+        hideKeyboardWhenTappedAround()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Private Methods
+    
+    private func setupUI() {
+        phoneNumberTextField.delegate = self
+        phoneNumberTextField.layer.cornerRadius = 17
     }
-    */
+    
+    //MARK: - Actions
+    
+    @IBAction func saveNumberTapped(_ sender: UIButton) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        
+        guard let viewController = storyBoard.instantiateViewController(withIdentifier: "VerifyViewController") as? VerifyViewController else {
+            return
+        }
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+}
+// MARK: - UITextFieldDelegate
 
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        saveNumberTapped(saveButton)
+        return false
+    }
 }

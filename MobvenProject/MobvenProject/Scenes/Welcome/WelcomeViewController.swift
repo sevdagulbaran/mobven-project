@@ -19,7 +19,13 @@ final class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configureBackButtonTitle("")
+        storedMode()
+    }
+    
+    // MARK: - Private Methods
+    
+    private func storedMode() {
         let mode = UserDefaults.standard.string(forKey: "appMode")
         if mode == "dark" {
             overrideUserInterfaceStyle = .dark
@@ -44,17 +50,6 @@ final class WelcomeViewController: UIViewController {
         }
     }
     
-    //MARK: - Notification
-    
-    @objc  func interfaceStyleChanged() {
-        let mode = UserDefaults.standard.string(forKey: "appMode")
-        if mode == "dark" {
-            modeSwitch.setOn(true, animated: true)
-        } else {
-            modeSwitch.setOn(false, animated: true)
-        }
-    }
-    
     @IBAction private func goToSignIn(_ sender: UIButton) {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         
@@ -71,5 +66,16 @@ final class WelcomeViewController: UIViewController {
             return
         }
         navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    //MARK: - Notification
+    
+    @objc  func interfaceStyleChanged() {
+        let mode = UserDefaults.standard.string(forKey: "appMode")
+        if mode == "dark" {
+            modeSwitch.setOn(true, animated: true)
+        } else {
+            modeSwitch.setOn(false, animated: true)
+        }
     }
 }

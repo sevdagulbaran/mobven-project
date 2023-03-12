@@ -22,7 +22,7 @@ final class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideKeyboard()
+        hideKeyboardWhenTappedAround()
         setupUI()
     }
     
@@ -37,17 +37,6 @@ final class RegisterViewController: UIViewController {
     private func setupUI() {
         nameTextField.delegate = self
         nameTextField.layer.cornerRadius = 17
-    }
-    
-    private func hideKeyboard() {
-        let tap = UITapGestureRecognizer(
-            target: self,
-            action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tap)
-    }
-    
-    @objc private func dismissKeyboard() {
-        view.endEditing(true)
     }
 }
 
