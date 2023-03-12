@@ -22,14 +22,7 @@ final class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideKeyboardWhenTappedAround()
         setupUI()
-    }
-    
-    // MARK: - Actions
-    
-    @IBAction func saveAccountInformationTapped(_ sender: UIButton) {
-        print("tapped")
     }
     
     // MARK: - Private Methods
@@ -37,6 +30,13 @@ final class RegisterViewController: UIViewController {
     private func setupUI() {
         nameTextField.delegate = self
         nameTextField.layer.cornerRadius = 17
+        hideKeyboardWhenTappedAround()
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction private func saveAccountInformationTapped(_ sender: UIButton) {
+        print("tapped")
     }
 }
 

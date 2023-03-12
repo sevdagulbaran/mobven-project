@@ -17,8 +17,7 @@
 		5293983D298FC848006D5060 /* MobvenProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5293983C298FC848006D5060 /* MobvenProjectUITestsLaunchTests.swift */; };
 		52DC3A4A29BD06EF00FB4228 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC3A4929BD06EF00FB4228 /* Color+Ext.swift */; };
 		52DC3A4C29BD3CB100FB4228 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC3A4B29BD3CB100FB4228 /* VerifyViewController.swift */; };
-		52DC3A4E29BD501E00FB4228 /* BackButtonTitle+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC3A4D29BD501E00FB4228 /* BackButtonTitle+Ext.swift */; };
-		52DC3A5029BD51C100FB4228 /* HideKeyboard+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC3A4F29BD51C100FB4228 /* HideKeyboard+Ext.swift */; };
+		52DC3A4E29BD501E00FB4228 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC3A4D29BD501E00FB4228 /* UIViewController+Ext.swift */; };
 		52E21F3B29BA83240086553E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E21F3A29BA83240086553E /* WelcomeViewController.swift */; };
 		52E21F3D29BA8AD50086553E /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52FB8CF229B786010021D809 /* Montserrat-Bold.ttf */; };
 		52E21F3E29BA8ADC0086553E /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52FB8CEF29B786010021D809 /* Montserrat-Medium.ttf */; };
@@ -62,8 +61,7 @@
 		5293984B298FC893006D5060 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		52DC3A4929BD06EF00FB4228 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		52DC3A4B29BD3CB100FB4228 /* VerifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
-		52DC3A4D29BD501E00FB4228 /* BackButtonTitle+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BackButtonTitle+Ext.swift"; sourceTree = "<group>"; };
-		52DC3A4F29BD51C100FB4228 /* HideKeyboard+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HideKeyboard+Ext.swift"; sourceTree = "<group>"; };
+		52DC3A4D29BD501E00FB4228 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		52E21F3A29BA83240086553E /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		52E21F4029BA9A450086553E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		52FB8CE329B744610021D809 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -208,8 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				52DC3A4929BD06EF00FB4228 /* Color+Ext.swift */,
-				52DC3A4D29BD501E00FB4228 /* BackButtonTitle+Ext.swift */,
-				52DC3A4F29BD51C100FB4228 /* HideKeyboard+Ext.swift */,
+				52DC3A4D29BD501E00FB4228 /* UIViewController+Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -384,8 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52DC3A4E29BD501E00FB4228 /* BackButtonTitle+Ext.swift in Sources */,
-				52DC3A5029BD51C100FB4228 /* HideKeyboard+Ext.swift in Sources */,
+				52DC3A4E29BD501E00FB4228 /* UIViewController+Ext.swift in Sources */,
 				52FB8CE429B744610021D809 /* RegisterViewController.swift in Sources */,
 				52E21F3B29BA83240086553E /* WelcomeViewController.swift in Sources */,
 				5293981A298FC845006D5060 /* AppDelegate.swift in Sources */,
