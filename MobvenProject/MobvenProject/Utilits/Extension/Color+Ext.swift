@@ -22,4 +22,17 @@ extension UIColor {
     static let skyBlue = UIColor(named: "Sky-Blue")
     static let customWhite = UIColor(named: "White")
     static let customYellow = UIColor(named: "Yellow")
+    
+    static var gradientColor: UIColor {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        gradientLayer.colors = [UIColor.purple.cgColor, UIColor.blue.cgColor]
+        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
+        gradientLayer.endPoint = CGPoint(x: 1.0, y: 1.0)
+        UIGraphicsBeginImageContextWithOptions(gradientLayer.bounds.size, false, 0.0)
+        gradientLayer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return UIColor(patternImage: image!)
+    }
 }

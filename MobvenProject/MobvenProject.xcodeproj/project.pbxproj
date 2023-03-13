@@ -15,6 +15,7 @@
 		52939831298FC848006D5060 /* MobvenProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52939830298FC848006D5060 /* MobvenProjectTests.swift */; };
 		5293983B298FC848006D5060 /* MobvenProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5293983A298FC848006D5060 /* MobvenProjectUITests.swift */; };
 		5293983D298FC848006D5060 /* MobvenProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5293983C298FC848006D5060 /* MobvenProjectUITestsLaunchTests.swift */; };
+		529F425729BEFBED00B27CD1 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529F425629BEFBED00B27CD1 /* UIView+Ext.swift */; };
 		52DC3A4A29BD06EF00FB4228 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC3A4929BD06EF00FB4228 /* Color+Ext.swift */; };
 		52DC3A4C29BD3CB100FB4228 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC3A4B29BD3CB100FB4228 /* VerifyViewController.swift */; };
 		52DC3A4E29BD501E00FB4228 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC3A4D29BD501E00FB4228 /* UIViewController+Ext.swift */; };
@@ -59,6 +60,7 @@
 		5293983C298FC848006D5060 /* MobvenProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobvenProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5293984A298FC874006D5060 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		5293984B298FC893006D5060 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		529F425629BEFBED00B27CD1 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		52DC3A4929BD06EF00FB4228 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		52DC3A4B29BD3CB100FB4228 /* VerifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
 		52DC3A4D29BD501E00FB4228 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 			children = (
 				52DC3A4929BD06EF00FB4228 /* Color+Ext.swift */,
 				52DC3A4D29BD501E00FB4228 /* UIViewController+Ext.swift */,
+				529F425629BEFBED00B27CD1 /* UIView+Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				52E21F3B29BA83240086553E /* WelcomeViewController.swift in Sources */,
 				5293981A298FC845006D5060 /* AppDelegate.swift in Sources */,
 				52E21F4129BA9A450086553E /* LoginViewController.swift in Sources */,
+				529F425729BEFBED00B27CD1 /* UIView+Ext.swift in Sources */,
 				5293981C298FC845006D5060 /* SceneDelegate.swift in Sources */,
 				52DC3A4A29BD06EF00FB4228 /* Color+Ext.swift in Sources */,
 				52DC3A4C29BD3CB100FB4228 /* VerifyViewController.swift in Sources */,

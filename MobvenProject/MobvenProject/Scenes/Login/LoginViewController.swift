@@ -30,8 +30,21 @@ final class LoginViewController: UIViewController {
         phoneNumberTextField.layer.cornerRadius = 17
         configureBackButtonTitle("")
         hideKeyboardWhenTappedAround()
+        
+        let attributedText = NSMutableAttributedString(string: "By clicking continue you agree to our ")
+        let boldAttributes: [NSAttributedString.Key: Any] = [
+            .font: UIFont.boldSystemFont(ofSize: 10),
+            .foregroundColor: UIColor.gradientColor
+        ]
+        
+        let boldText = NSAttributedString(string: "Terms and Condition", attributes: boldAttributes)
+        attributedText.append(boldText)
+        attributedText.append(NSAttributedString(string: "."))
+        
+        termsLabel.attributedText = attributedText
+        
     }
-    
+     
     private func showAlert(message: String) {
         let alert = UIAlertController(title: "", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))

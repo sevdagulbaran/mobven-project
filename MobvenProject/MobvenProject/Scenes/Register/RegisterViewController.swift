@@ -36,7 +36,12 @@ final class RegisterViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction private func saveAccountInformationTapped(_ sender: UIButton) {
-        print("tapped")
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        
+        guard let viewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else {
+            return
+        }
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 

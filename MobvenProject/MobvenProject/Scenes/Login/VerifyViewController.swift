@@ -95,11 +95,6 @@ final class VerifyViewController: UIViewController {
         
         let enteredCode = "\(firstDigitField.text ?? "")\(secondDigitField.text ?? "")\(thirdDigitField.text ?? "")\(fourthDigitField.text ?? "")"
         
-        print(enteredCode)
-        
-        //When the otp code matches, it will be updated according to the conditions.
-        goToRegisterViewController()
-        
         if enteredCode == otpCode {
             
         } else {
@@ -112,15 +107,6 @@ final class VerifyViewController: UIViewController {
         for textField in [firstDigitField, secondDigitField, thirdDigitField, fourthDigitField] {
             textField?.text = ""
         }
-    }
-    
-    private func goToRegisterViewController() {
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        
-        guard let viewController = storyBoard.instantiateViewController(withIdentifier: "RegisterViewController") as? RegisterViewController else {
-            return
-        }
-        navigationController?.pushViewController(viewController, animated: true)
     }
     
     //MARK: - Actions
