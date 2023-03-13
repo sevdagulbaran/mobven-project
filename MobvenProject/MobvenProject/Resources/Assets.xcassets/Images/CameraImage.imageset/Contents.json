@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "Personal - Empty 1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -11,10 +12,12 @@
           "value" : "dark"
         }
       ],
+      "filename" : "Personal - Empty.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Personal - Empty@2x 1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
@@ -25,10 +28,12 @@
           "value" : "dark"
         }
       ],
+      "filename" : "Personal - Empty@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Personal - Empty@3x 1.png",
       "idiom" : "universal",
       "scale" : "3x"
     },
@@ -39,6 +44,7 @@
           "value" : "dark"
         }
       ],
+      "filename" : "Personal - Empty@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

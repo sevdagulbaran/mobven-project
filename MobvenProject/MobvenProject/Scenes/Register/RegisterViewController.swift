@@ -22,14 +22,7 @@ final class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideKeyboard()
         setupUI()
-    }
-    
-    // MARK: - Actions
-    
-    @IBAction func saveAccountInformationTapped(_ sender: UIButton) {
-        print("tapped")
     }
     
     // MARK: - Private Methods
@@ -37,17 +30,19 @@ final class RegisterViewController: UIViewController {
     private func setupUI() {
         nameTextField.delegate = self
         nameTextField.layer.cornerRadius = 17
+        hideKeyboardWhenTappedAround()
+        configureBackButtonTitle("")
     }
     
-    private func hideKeyboard() {
-        let tap = UITapGestureRecognizer(
-            target: self,
-            action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tap)
-    }
+    // MARK: - Actions
     
-    @objc private func dismissKeyboard() {
-        view.endEditing(true)
+    @IBAction private func saveAccountInformationTapped(_ sender: UIButton) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        
+        guard let viewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else {
+            return
+        }
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
