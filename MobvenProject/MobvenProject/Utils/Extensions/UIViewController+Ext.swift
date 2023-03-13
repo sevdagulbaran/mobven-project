@@ -27,15 +27,5 @@ extension UIViewController {
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
-    
-    //MARK: Show-Hide Keyboard
-    
-    @objc func keyboardWillShow(sender: NSNotification) {
-        //frame will be added in
-        view.frame.origin.y = view.frame.origin.y - 200
-    }
-        
-    @objc func keyboardWillHide(notification: NSNotification) {
-        view.frame.origin.y = 0
-    }
 }
+

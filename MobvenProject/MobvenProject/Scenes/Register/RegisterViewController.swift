@@ -31,6 +31,7 @@ final class RegisterViewController: UIViewController {
         nameTextField.delegate = self
         nameTextField.layer.cornerRadius = 17
         hideKeyboardWhenTappedAround()
+        configureBackButtonTitle("")
     }
     
     // MARK: - Actions

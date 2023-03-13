@@ -15,6 +15,7 @@ final class VerifyViewController: UIViewController {
     @IBOutlet private weak var secondDigitField: UITextField!
     @IBOutlet private weak var thirdDigitField: UITextField!
     @IBOutlet private weak var fourthDigitField: UITextField!
+    @IBOutlet private weak var scrollView: UIScrollView!
     
     private var otpCode: String = ""
     
@@ -22,7 +23,6 @@ final class VerifyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupUI()
     }
     
@@ -36,30 +36,49 @@ final class VerifyViewController: UIViewController {
     }
     
     private func setupTextFields() {
-        
-        for textField in [firstDigitField, secondDigitField, thirdDigitField, fourthDigitField] {
+        let textFields = [firstDigitField, secondDigitField, thirdDigitField, fourthDigitField]
+    
+        for textField in textFields {
             textField?.delegate = self
             textField?.keyboardType = .numberPad
+            textField?.textContentType = .oneTimeCode
+            textField?.autocorrectionType = .no
             textField?.textColor = .blueDark
             textField?.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         }
     }
     
     private func setupKeyboardHiding() {
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(keyboardWillShow),
-                                               name: UIResponder.keyboardWillShowNotification,
-                                               object: nil)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardWillShowNotification),
+            name: UIResponder.keyboardWillShowNotification,
+            object: nil)
         
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(keyboardWillHide),
-                                               name: UIResponder.keyboardWillHideNotification,
-                                               object: nil)
-        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardWillHideNotification),
+            name: UIResponder.keyboardWillHideNotification,
+            object: nil)
     }
     
-    @objc private func textDidChange(_ textField: UITextField){
-        
+    //MARK: Code for scrolling
+    
+    @objc private func keyboardWillShowNotification(notification : Notification){
+        if let frame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+            let height = frame.cgRectValue.height
+            scrollView.contentSize.height = scrollView.contentSize.height + height
+        }
+    }
+    
+    @objc private func keyboardWillHideNotification(notification : Notification){
+        if let frame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+            let height = frame.cgRectValue.height
+            scrollView.contentSize.height = scrollView.contentSize.height - height
+        }
+    }
+    
+    @objc private func textDidChange(_ textField: UITextField) {
         guard let text = textField.text else { return }
         
         if text.count == 1 {
@@ -92,7 +111,6 @@ final class VerifyViewController: UIViewController {
     }
     
     private func verifyOTPCode() {
-        
         let enteredCode = "\(firstDigitField.text ?? "")\(secondDigitField.text ?? "")\(thirdDigitField.text ?? "")\(fourthDigitField.text ?? "")"
         
         if enteredCode == otpCode {
@@ -101,9 +119,8 @@ final class VerifyViewController: UIViewController {
             
         }
     }
-
+    
     private func clearTextField() {
-        
         for textField in [firstDigitField, secondDigitField, thirdDigitField, fourthDigitField] {
             textField?.text = ""
         }
@@ -114,7 +131,6 @@ final class VerifyViewController: UIViewController {
     @IBAction private func saveVerifyCodeTapped(_ sender: UIButton) {
         verifyOTPCode()
         clearTextField()
-        
     }
 }
 
@@ -123,7 +139,6 @@ final class VerifyViewController: UIViewController {
 extension VerifyViewController: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
         guard let currentText = textField.text else {
             return true
         }

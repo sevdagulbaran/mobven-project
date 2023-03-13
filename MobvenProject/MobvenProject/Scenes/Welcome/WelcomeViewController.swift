@@ -37,11 +37,11 @@ final class WelcomeViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction private func changeModeTapped(_ sender: UISwitch) {
-           UserDefaults.standard.set(sender.isOn, forKey: "isDarkMode")
+        UserDefaults.standard.set(sender.isOn, forKey: "isDarkMode")
         if let windowScene = UIApplication.shared.connectedScenes.map({ $0 as? UIWindowScene }).first,
            let window = windowScene?.windows.first {
-                window.overrideUserInterfaceStyle = sender.isOn ? .dark: .light
-            }
+            window.overrideUserInterfaceStyle = sender.isOn ? .dark: .light
+        }
     }
     
     @IBAction private func goToSignIn(_ sender: UIButton) {

@@ -25,11 +25,10 @@ final class LoginViewController: UIViewController {
     // MARK: - Private Methods
     
     private func setupUI() {
-        phoneNumberTextField.delegate = self
-        phoneNumberTextField.keyboardType = .numberPad
-        phoneNumberTextField.layer.cornerRadius = 17
+        setupPhoneNumberTextField()
         configureBackButtonTitle("")
         hideKeyboardWhenTappedAround()
+        
         
         let attributedText = NSMutableAttributedString(string: "By clicking continue you agree to our ")
         let boldAttributes: [NSAttributedString.Key: Any] = [
@@ -44,7 +43,13 @@ final class LoginViewController: UIViewController {
         termsLabel.attributedText = attributedText
         
     }
-     
+    
+    private func setupPhoneNumberTextField() {
+        phoneNumberTextField.delegate = self
+        phoneNumberTextField.keyboardType = .numberPad
+        phoneNumberTextField.layer.cornerRadius = 17
+    }
+    
     private func showAlert(message: String) {
         let alert = UIAlertController(title: "", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -54,7 +59,6 @@ final class LoginViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction private func saveNumberTapped(_ sender: UIButton) {
-        
         if phoneNumberTextField.text?.count == 11 {
             let storyBoard = UIStoryboard(name: "Main", bundle: nil)
             
@@ -67,7 +71,8 @@ final class LoginViewController: UIViewController {
 }
 // MARK: - UITextFieldDelegate
 
- extension LoginViewController: UITextFieldDelegate {
+extension LoginViewController: UITextFieldDelegate {
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         saveNumberTapped(saveButton)
@@ -84,6 +89,5 @@ final class LoginViewController: UIViewController {
             return false
         }
     }
-
 }
 
