@@ -7,9 +7,16 @@
 
 import UIKit
 
-final class RegisterViewController: UIViewController {
+protocol RegisterDisplayLogic: AnyObject {
+    
+}
+
+final class RegisterViewController: UIViewController, RegisterDisplayLogic {
     
     // MARK: - Properties
+    
+    var interactor: RegisterBusinessLogic?
+    var router: (RegisterRoutingLogic & RegisterDataPassing)?
     
     @IBOutlet private weak var mainTitleLabel: UILabel!
     @IBOutlet private weak var subTitleLabel: UILabel!
@@ -20,9 +27,33 @@ final class RegisterViewController: UIViewController {
     
     //MARK: - Lifecycle
     
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setup()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    // MARK: Setup
+    
+    private func setup() {
+        let viewController = self
+        let interactor = RegisterInteractor()
+        let presenter = RegisterPresenter()
+        let router = RegisterRouter()
+        viewController.interactor = interactor
+        viewController.router = router
+        interactor.presenter = presenter
+        presenter.viewController = viewController
+        router.viewController = viewController
+        router.dataStore = interactor
     }
     
     // MARK: - Private Methods
@@ -37,12 +68,7 @@ final class RegisterViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction private func saveAccountInformationTapped(_ sender: UIButton) {
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        
-        guard let viewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else {
-            return
-        }
-        navigationController?.pushViewController(viewController, animated: true)
+        router?.goToLogin()
     }
 }
 

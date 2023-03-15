@@ -7,9 +7,16 @@
 
 import UIKit
 
-final class VerifyViewController: UIViewController {
+protocol VerifyDisplayLogic: AnyObject {
+    
+}
+
+final class VerifyViewController: UIViewController, VerifyDisplayLogic {
     
     //MARK: - Properties
+    
+    var interactor: VerifyBusinessLogic?
+    var router: (VerifyRoutingLogic & VerifyDataPassing)?
     
     @IBOutlet private weak var firstDigitField:  UITextField!
     @IBOutlet private weak var secondDigitField: UITextField!
@@ -21,11 +28,34 @@ final class VerifyViewController: UIViewController {
     
     //MARK: - LifeCycle
     
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setup()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    // MARK: Setup
+    
+    private func setup() {
+        let viewController = self
+        let interactor = VerifyInteractor()
+        let presenter = VerifyPresenter()
+        let router = VerifyRouter()
+        viewController.interactor = interactor
+        viewController.router = router
+        interactor.presenter = presenter
+        presenter.viewController = viewController
+        router.viewController = viewController
+        router.dataStore = interactor
+    }
     //MARK: - Private Methods
     
     private func setupUI() {
