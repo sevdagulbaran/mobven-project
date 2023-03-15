@@ -6,20 +6,49 @@
 //
 
 import UIKit
-
-final class LoginViewController: UIViewController {
+protocol LoginDisplayLogic: AnyObject {
     
-    // MARK: - Properties
+}
+
+final class LoginViewController: UIViewController, LoginDisplayLogic {
+    
+    var interactor: LoginBusinessLogic?
+    var router: (LoginRoutingLogic & LoginDataPassing)?
+    
     
     @IBOutlet private weak var phoneNumberTextField: UITextField!
     @IBOutlet private weak var termsLabel: UILabel!
     @IBOutlet private weak var saveButton: UIButton!
     
-    //MARK: - Lifecycle
+    // MARK: Object lifecycle
     
-    override func viewDidLoad() {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setup()
+    }
+    override func viewDidLoad(){
         super.viewDidLoad()
         setupUI()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    // MARK: Setup
+    
+    private func setup() {
+        let viewController = self
+        let interactor = LoginInteractor()
+        let presenter = LoginPresenter()
+        let router = LoginRouter()
+        viewController.interactor = interactor
+        viewController.router = router
+        interactor.presenter = presenter
+        presenter.viewController = viewController
+        router.viewController = viewController
+        router.dataStore = interactor
     }
     
     // MARK: - Private Methods
@@ -60,10 +89,7 @@ final class LoginViewController: UIViewController {
     
     @IBAction private func saveNumberTapped(_ sender: UIButton) {
         if phoneNumberTextField.text?.count == 11 {
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            
-            guard let viewController = storyBoard.instantiateViewController(withIdentifier: "VerifyViewController") as? VerifyViewController else { return }
-            navigationController?.pushViewController(viewController, animated: true)
+            router?.goToVerify()
         } else {
             showAlert(message: "Please enter a valid 11 digit phone number.")
         }

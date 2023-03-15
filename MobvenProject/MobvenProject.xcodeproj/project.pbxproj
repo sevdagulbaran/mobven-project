@@ -18,6 +18,32 @@
 		5293983B298FC848006D5060 /* MobvenProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5293983A298FC848006D5060 /* MobvenProjectUITests.swift */; };
 		5293983D298FC848006D5060 /* MobvenProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5293983C298FC848006D5060 /* MobvenProjectUITestsLaunchTests.swift */; };
 		529F425729BEFBED00B27CD1 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529F425629BEFBED00B27CD1 /* UIView+Ext.swift */; };
+		52AD0E9029BFD1E100FB0006 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD0E8F29BFD1E100FB0006 /* HTTPClient.swift */; };
+		52AD0E9329BFD34900FB0006 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD0E9229BFD34900FB0006 /* Endpoint.swift */; };
+		52D00BA729C1FE070048FF5F /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52D00BA029C1FE070048FF5F /* Login.storyboard */; };
+		52D00BA929C1FE070048FF5F /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D00BA229C1FE070048FF5F /* LoginPresenter.swift */; };
+		52D00BAA29C1FE070048FF5F /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D00BA329C1FE070048FF5F /* LoginInteractor.swift */; };
+		52D00BAB29C1FE070048FF5F /* LoginModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D00BA429C1FE070048FF5F /* LoginModels.swift */; };
+		52D00BAC29C1FE070048FF5F /* LoginWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D00BA529C1FE070048FF5F /* LoginWorker.swift */; };
+		52D00BAD29C1FE070048FF5F /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D00BA629C1FE070048FF5F /* LoginRouter.swift */; };
+		52D00BB529C2330E0048FF5F /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52D00BAF29C2330E0048FF5F /* Welcome.storyboard */; };
+		52D00BB629C2330E0048FF5F /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D00BB029C2330E0048FF5F /* WelcomePresenter.swift */; };
+		52D00BB729C2330E0048FF5F /* WelcomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D00BB129C2330E0048FF5F /* WelcomeInteractor.swift */; };
+		52D00BB829C2330E0048FF5F /* WelcomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D00BB229C2330E0048FF5F /* WelcomeModels.swift */; };
+		52D00BB929C2330E0048FF5F /* WelcomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D00BB329C2330E0048FF5F /* WelcomeWorker.swift */; };
+		52D00BBA29C2330E0048FF5F /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D00BB429C2330E0048FF5F /* WelcomeRouter.swift */; };
+		52D00BC129C2347A0048FF5F /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52D00BBB29C2347A0048FF5F /* Register.storyboard */; };
+		52D00BC229C2347A0048FF5F /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D00BBC29C2347A0048FF5F /* RegisterPresenter.swift */; };
+		52D00BC329C2347A0048FF5F /* RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D00BBD29C2347A0048FF5F /* RegisterInteractor.swift */; };
+		52D00BC429C2347A0048FF5F /* RegisterModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D00BBE29C2347A0048FF5F /* RegisterModels.swift */; };
+		52D00BC529C2347A0048FF5F /* RegisterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D00BBF29C2347A0048FF5F /* RegisterWorker.swift */; };
+		52D00BC629C2347A0048FF5F /* RegisterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D00BC029C2347A0048FF5F /* RegisterRouter.swift */; };
+		52D00BCD29C235920048FF5F /* Verify.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52D00BC729C235920048FF5F /* Verify.storyboard */; };
+		52D00BCE29C235920048FF5F /* VerifyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D00BC829C235920048FF5F /* VerifyPresenter.swift */; };
+		52D00BCF29C235920048FF5F /* VerifyInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D00BC929C235920048FF5F /* VerifyInteractor.swift */; };
+		52D00BD029C235920048FF5F /* VerifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D00BCA29C235920048FF5F /* VerifyModels.swift */; };
+		52D00BD129C235920048FF5F /* VerifyWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D00BCB29C235920048FF5F /* VerifyWorker.swift */; };
+		52D00BD229C235920048FF5F /* VerifyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D00BCC29C235920048FF5F /* VerifyRouter.swift */; };
 		52DC3A4A29BD06EF00FB4228 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC3A4929BD06EF00FB4228 /* Color+Ext.swift */; };
 		52DC3A4C29BD3CB100FB4228 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC3A4B29BD3CB100FB4228 /* VerifyViewController.swift */; };
 		52DC3A4E29BD501E00FB4228 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC3A4D29BD501E00FB4228 /* UIViewController+Ext.swift */; };
@@ -65,6 +91,32 @@
 		5293984A298FC874006D5060 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		5293984B298FC893006D5060 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		529F425629BEFBED00B27CD1 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		52AD0E8F29BFD1E100FB0006 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		52AD0E9229BFD34900FB0006 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		52D00BA029C1FE070048FF5F /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		52D00BA229C1FE070048FF5F /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		52D00BA329C1FE070048FF5F /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		52D00BA429C1FE070048FF5F /* LoginModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModels.swift; sourceTree = "<group>"; };
+		52D00BA529C1FE070048FF5F /* LoginWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWorker.swift; sourceTree = "<group>"; };
+		52D00BA629C1FE070048FF5F /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		52D00BAF29C2330E0048FF5F /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
+		52D00BB029C2330E0048FF5F /* WelcomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresenter.swift; sourceTree = "<group>"; };
+		52D00BB129C2330E0048FF5F /* WelcomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeInteractor.swift; sourceTree = "<group>"; };
+		52D00BB229C2330E0048FF5F /* WelcomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeModels.swift; sourceTree = "<group>"; };
+		52D00BB329C2330E0048FF5F /* WelcomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeWorker.swift; sourceTree = "<group>"; };
+		52D00BB429C2330E0048FF5F /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
+		52D00BBB29C2347A0048FF5F /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		52D00BBC29C2347A0048FF5F /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
+		52D00BBD29C2347A0048FF5F /* RegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInteractor.swift; sourceTree = "<group>"; };
+		52D00BBE29C2347A0048FF5F /* RegisterModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModels.swift; sourceTree = "<group>"; };
+		52D00BBF29C2347A0048FF5F /* RegisterWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWorker.swift; sourceTree = "<group>"; };
+		52D00BC029C2347A0048FF5F /* RegisterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRouter.swift; sourceTree = "<group>"; };
+		52D00BC729C235920048FF5F /* Verify.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Verify.storyboard; sourceTree = "<group>"; };
+		52D00BC829C235920048FF5F /* VerifyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPresenter.swift; sourceTree = "<group>"; };
+		52D00BC929C235920048FF5F /* VerifyInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyInteractor.swift; sourceTree = "<group>"; };
+		52D00BCA29C235920048FF5F /* VerifyModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyModels.swift; sourceTree = "<group>"; };
+		52D00BCB29C235920048FF5F /* VerifyWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyWorker.swift; sourceTree = "<group>"; };
+		52D00BCC29C235920048FF5F /* VerifyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyRouter.swift; sourceTree = "<group>"; };
 		52DC3A4929BD06EF00FB4228 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		52DC3A4B29BD3CB100FB4228 /* VerifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
 		52DC3A4D29BD501E00FB4228 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
@@ -105,8 +157,10 @@
 		524E8AAF29BF937300E05337 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				52AD0E9129BFD33600FB0006 /* Endpoint */,
 				524E8AB029BF938F00E05337 /* RequestMethod.swift */,
 				524E8AB229BF946400E05337 /* RequestError.swift */,
+				52AD0E8F29BFD1E100FB0006 /* HTTPClient.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -114,7 +168,13 @@
 		525BFEC029BFB16900929FC0 /* Verify */ = {
 			isa = PBXGroup;
 			children = (
+				52D00BC729C235920048FF5F /* Verify.storyboard */,
 				52DC3A4B29BD3CB100FB4228 /* VerifyViewController.swift */,
+				52D00BC829C235920048FF5F /* VerifyPresenter.swift */,
+				52D00BC929C235920048FF5F /* VerifyInteractor.swift */,
+				52D00BCA29C235920048FF5F /* VerifyModels.swift */,
+				52D00BCB29C235920048FF5F /* VerifyWorker.swift */,
+				52D00BCC29C235920048FF5F /* VerifyRouter.swift */,
 			);
 			path = Verify;
 			sourceTree = "<group>";
@@ -219,6 +279,14 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		52AD0E9129BFD33600FB0006 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				52AD0E9229BFD34900FB0006 /* Endpoint.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
 		52DC3A4729BD06CF00FB4228 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,7 +308,13 @@
 		52E21F3729BA82E20086553E /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				52D00BBB29C2347A0048FF5F /* Register.storyboard */,
 				52FB8CE329B744610021D809 /* RegisterViewController.swift */,
+				52D00BBC29C2347A0048FF5F /* RegisterPresenter.swift */,
+				52D00BBD29C2347A0048FF5F /* RegisterInteractor.swift */,
+				52D00BBE29C2347A0048FF5F /* RegisterModels.swift */,
+				52D00BBF29C2347A0048FF5F /* RegisterWorker.swift */,
+				52D00BC029C2347A0048FF5F /* RegisterRouter.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -248,7 +322,13 @@
 		52E21F3829BA82EC0086553E /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
+				52D00BAF29C2330E0048FF5F /* Welcome.storyboard */,
 				52E21F3A29BA83240086553E /* WelcomeViewController.swift */,
+				52D00BB029C2330E0048FF5F /* WelcomePresenter.swift */,
+				52D00BB129C2330E0048FF5F /* WelcomeInteractor.swift */,
+				52D00BB229C2330E0048FF5F /* WelcomeModels.swift */,
+				52D00BB329C2330E0048FF5F /* WelcomeWorker.swift */,
+				52D00BB429C2330E0048FF5F /* WelcomeRouter.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -256,7 +336,13 @@
 		52E21F4229BA9A4F0086553E /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				52D00BA029C1FE070048FF5F /* Login.storyboard */,
 				52E21F4029BA9A450086553E /* LoginViewController.swift */,
+				52D00BA229C1FE070048FF5F /* LoginPresenter.swift */,
+				52D00BA329C1FE070048FF5F /* LoginInteractor.swift */,
+				52D00BA429C1FE070048FF5F /* LoginModels.swift */,
+				52D00BA529C1FE070048FF5F /* LoginWorker.swift */,
+				52D00BA629C1FE070048FF5F /* LoginRouter.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -375,13 +461,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52D00BA729C1FE070048FF5F /* Login.storyboard in Resources */,
 				52E21F3D29BA8AD50086553E /* Montserrat-Bold.ttf in Resources */,
 				52939826298FC847006D5060 /* LaunchScreen.storyboard in Resources */,
 				52E21F3F29BA8B010086553E /* Montserrat-Regular.ttf in Resources */,
 				52FB8CE629B74BDB0021D809 /* Colors.xcassets in Resources */,
+				52D00BB529C2330E0048FF5F /* Welcome.storyboard in Resources */,
 				52939823298FC847006D5060 /* Assets.xcassets in Resources */,
 				52E21F3E29BA8ADC0086553E /* Montserrat-Medium.ttf in Resources */,
+				52D00BCD29C235920048FF5F /* Verify.storyboard in Resources */,
 				52939821298FC845006D5060 /* Main.storyboard in Resources */,
+				52D00BC129C2347A0048FF5F /* Register.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,16 +496,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52D00BAA29C1FE070048FF5F /* LoginInteractor.swift in Sources */,
+				52D00BB629C2330E0048FF5F /* WelcomePresenter.swift in Sources */,
+				52D00BA929C1FE070048FF5F /* LoginPresenter.swift in Sources */,
+				52D00BC629C2347A0048FF5F /* RegisterRouter.swift in Sources */,
+				52D00BBA29C2330E0048FF5F /* WelcomeRouter.swift in Sources */,
+				52D00BCE29C235920048FF5F /* VerifyPresenter.swift in Sources */,
+				52D00BD029C235920048FF5F /* VerifyModels.swift in Sources */,
 				52DC3A4E29BD501E00FB4228 /* UIViewController+Ext.swift in Sources */,
 				52FB8CE429B744610021D809 /* RegisterViewController.swift in Sources */,
+				52D00BC529C2347A0048FF5F /* RegisterWorker.swift in Sources */,
+				52AD0E9029BFD1E100FB0006 /* HTTPClient.swift in Sources */,
+				52AD0E9329BFD34900FB0006 /* Endpoint.swift in Sources */,
 				524E8AB329BF946400E05337 /* RequestError.swift in Sources */,
+				52D00BB729C2330E0048FF5F /* WelcomeInteractor.swift in Sources */,
 				52E21F3B29BA83240086553E /* WelcomeViewController.swift in Sources */,
 				5293981A298FC845006D5060 /* AppDelegate.swift in Sources */,
 				524E8AB129BF938F00E05337 /* RequestMethod.swift in Sources */,
 				52E21F4129BA9A450086553E /* LoginViewController.swift in Sources */,
 				529F425729BEFBED00B27CD1 /* UIView+Ext.swift in Sources */,
 				5293981C298FC845006D5060 /* SceneDelegate.swift in Sources */,
+				52D00BB829C2330E0048FF5F /* WelcomeModels.swift in Sources */,
+				52D00BC429C2347A0048FF5F /* RegisterModels.swift in Sources */,
+				52D00BD229C235920048FF5F /* VerifyRouter.swift in Sources */,
+				52D00BAB29C1FE070048FF5F /* LoginModels.swift in Sources */,
+				52D00BB929C2330E0048FF5F /* WelcomeWorker.swift in Sources */,
+				52D00BC229C2347A0048FF5F /* RegisterPresenter.swift in Sources */,
 				52DC3A4A29BD06EF00FB4228 /* Color+Ext.swift in Sources */,
+				52D00BCF29C235920048FF5F /* VerifyInteractor.swift in Sources */,
+				52D00BAC29C1FE070048FF5F /* LoginWorker.swift in Sources */,
+				52D00BC329C2347A0048FF5F /* RegisterInteractor.swift in Sources */,
+				52D00BAD29C1FE070048FF5F /* LoginRouter.swift in Sources */,
+				52D00BD129C235920048FF5F /* VerifyWorker.swift in Sources */,
 				52DC3A4C29BD3CB100FB4228 /* VerifyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
