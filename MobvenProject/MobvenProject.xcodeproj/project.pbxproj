@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		524AF11C29C2FC7F00F50BEF /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524AF11A29C2FC7F00F50BEF /* HomeTableViewCell.swift */; };
+		524AF11D29C2FC7F00F50BEF /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 524AF11B29C2FC7F00F50BEF /* HomeTableViewCell.xib */; };
+		524AF12029C2FC9A00F50BEF /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524AF11E29C2FC9A00F50BEF /* HomeCollectionViewCell.swift */; };
+		524AF12129C2FC9A00F50BEF /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 524AF11F29C2FC9A00F50BEF /* HomeCollectionViewCell.xib */; };
 		524E8AB129BF938F00E05337 /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E8AB029BF938F00E05337 /* RequestMethod.swift */; };
 		524E8AB329BF946400E05337 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E8AB229BF946400E05337 /* RequestError.swift */; };
 		5293981A298FC845006D5060 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52939819298FC845006D5060 /* AppDelegate.swift */; };
@@ -44,7 +48,14 @@
 		52D00BD029C235920048FF5F /* VerifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D00BCA29C235920048FF5F /* VerifyModels.swift */; };
 		52D00BD129C235920048FF5F /* VerifyWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D00BCB29C235920048FF5F /* VerifyWorker.swift */; };
 		52D00BD229C235920048FF5F /* VerifyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D00BCC29C235920048FF5F /* VerifyRouter.swift */; };
-		52DC3A4A29BD06EF00FB4228 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC3A4929BD06EF00FB4228 /* Color+Ext.swift */; };
+		52D00BDC29C27CB50048FF5F /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52D00BD529C27CB50048FF5F /* Home.storyboard */; };
+		52D00BDD29C27CB50048FF5F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D00BD629C27CB50048FF5F /* HomeViewController.swift */; };
+		52D00BDE29C27CB50048FF5F /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D00BD729C27CB50048FF5F /* HomePresenter.swift */; };
+		52D00BDF29C27CB60048FF5F /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D00BD829C27CB50048FF5F /* HomeInteractor.swift */; };
+		52D00BE029C27CB60048FF5F /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D00BD929C27CB50048FF5F /* HomeModels.swift */; };
+		52D00BE129C27CB60048FF5F /* HomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D00BDA29C27CB50048FF5F /* HomeWorker.swift */; };
+		52D00BE229C27CB60048FF5F /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D00BDB29C27CB50048FF5F /* HomeRouter.swift */; };
+		52DC3A4A29BD06EF00FB4228 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC3A4929BD06EF00FB4228 /* UIColor+Ext.swift */; };
 		52DC3A4C29BD3CB100FB4228 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC3A4B29BD3CB100FB4228 /* VerifyViewController.swift */; };
 		52DC3A4E29BD501E00FB4228 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC3A4D29BD501E00FB4228 /* UIViewController+Ext.swift */; };
 		52E21F3B29BA83240086553E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E21F3A29BA83240086553E /* WelcomeViewController.swift */; };
@@ -74,6 +85,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		524AF11A29C2FC7F00F50BEF /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		524AF11B29C2FC7F00F50BEF /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		524AF11E29C2FC9A00F50BEF /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		524AF11F29C2FC9A00F50BEF /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		524E8AB029BF938F00E05337 /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
 		524E8AB229BF946400E05337 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		52939816298FC845006D5060 /* MobvenProjectDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobvenProjectDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,7 +132,14 @@
 		52D00BCA29C235920048FF5F /* VerifyModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyModels.swift; sourceTree = "<group>"; };
 		52D00BCB29C235920048FF5F /* VerifyWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyWorker.swift; sourceTree = "<group>"; };
 		52D00BCC29C235920048FF5F /* VerifyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyRouter.swift; sourceTree = "<group>"; };
-		52DC3A4929BD06EF00FB4228 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		52D00BD529C27CB50048FF5F /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		52D00BD629C27CB50048FF5F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		52D00BD729C27CB50048FF5F /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		52D00BD829C27CB50048FF5F /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		52D00BD929C27CB50048FF5F /* HomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
+		52D00BDA29C27CB50048FF5F /* HomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorker.swift; sourceTree = "<group>"; };
+		52D00BDB29C27CB50048FF5F /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		52DC3A4929BD06EF00FB4228 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		52DC3A4B29BD3CB100FB4228 /* VerifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
 		52DC3A4D29BD501E00FB4228 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		52E21F3A29BA83240086553E /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -154,12 +176,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		524AF11929C2FC5D00F50BEF /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				524AF12329C2FCBE00F50BEF /* HomeCollectionViewCell */,
+				524AF12229C2FCA400F50BEF /* HomeTableViewCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		524AF12229C2FCA400F50BEF /* HomeTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				524AF11A29C2FC7F00F50BEF /* HomeTableViewCell.swift */,
+				524AF11B29C2FC7F00F50BEF /* HomeTableViewCell.xib */,
+			);
+			path = HomeTableViewCell;
+			sourceTree = "<group>";
+		};
+		524AF12329C2FCBE00F50BEF /* HomeCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				524AF11E29C2FC9A00F50BEF /* HomeCollectionViewCell.swift */,
+				524AF11F29C2FC9A00F50BEF /* HomeCollectionViewCell.xib */,
+			);
+			path = HomeCollectionViewCell;
+			sourceTree = "<group>";
+		};
 		524E8AAF29BF937300E05337 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				52D00BD329C263860048FF5F /* Requests */,
 				52AD0E9129BFD33600FB0006 /* Endpoint */,
-				524E8AB029BF938F00E05337 /* RequestMethod.swift */,
-				524E8AB229BF946400E05337 /* RequestError.swift */,
 				52AD0E8F29BFD1E100FB0006 /* HTTPClient.swift */,
 			);
 			path = Networking;
@@ -262,6 +310,7 @@
 		52939856298FD047006D5060 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				52D00BD429C27CA40048FF5F /* Home */,
 				525BFEC029BFB16900929FC0 /* Verify */,
 				52E21F4229BA9A4F0086553E /* Login */,
 				52E21F3829BA82EC0086553E /* Welcome */,
@@ -287,6 +336,30 @@
 			path = Endpoint;
 			sourceTree = "<group>";
 		};
+		52D00BD329C263860048FF5F /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				524E8AB029BF938F00E05337 /* RequestMethod.swift */,
+				524E8AB229BF946400E05337 /* RequestError.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		52D00BD429C27CA40048FF5F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				524AF11929C2FC5D00F50BEF /* Cells */,
+				52D00BD529C27CB50048FF5F /* Home.storyboard */,
+				52D00BD629C27CB50048FF5F /* HomeViewController.swift */,
+				52D00BD729C27CB50048FF5F /* HomePresenter.swift */,
+				52D00BD829C27CB50048FF5F /* HomeInteractor.swift */,
+				52D00BD929C27CB50048FF5F /* HomeModels.swift */,
+				52D00BDA29C27CB50048FF5F /* HomeWorker.swift */,
+				52D00BDB29C27CB50048FF5F /* HomeRouter.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		52DC3A4729BD06CF00FB4228 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,7 +371,7 @@
 		52DC3A4829BD06DC00FB4228 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				52DC3A4929BD06EF00FB4228 /* Color+Ext.swift */,
+				52DC3A4929BD06EF00FB4228 /* UIColor+Ext.swift */,
 				52DC3A4D29BD501E00FB4228 /* UIViewController+Ext.swift */,
 				529F425629BEFBED00B27CD1 /* UIView+Ext.swift */,
 			);
@@ -464,12 +537,15 @@
 				52D00BA729C1FE070048FF5F /* Login.storyboard in Resources */,
 				52E21F3D29BA8AD50086553E /* Montserrat-Bold.ttf in Resources */,
 				52939826298FC847006D5060 /* LaunchScreen.storyboard in Resources */,
+				52D00BDC29C27CB50048FF5F /* Home.storyboard in Resources */,
 				52E21F3F29BA8B010086553E /* Montserrat-Regular.ttf in Resources */,
 				52FB8CE629B74BDB0021D809 /* Colors.xcassets in Resources */,
 				52D00BB529C2330E0048FF5F /* Welcome.storyboard in Resources */,
 				52939823298FC847006D5060 /* Assets.xcassets in Resources */,
+				524AF11D29C2FC7F00F50BEF /* HomeTableViewCell.xib in Resources */,
 				52E21F3E29BA8ADC0086553E /* Montserrat-Medium.ttf in Resources */,
 				52D00BCD29C235920048FF5F /* Verify.storyboard in Resources */,
+				524AF12129C2FC9A00F50BEF /* HomeCollectionViewCell.xib in Resources */,
 				52939821298FC845006D5060 /* Main.storyboard in Resources */,
 				52D00BC129C2347A0048FF5F /* Register.storyboard in Resources */,
 			);
@@ -499,8 +575,10 @@
 				52D00BAA29C1FE070048FF5F /* LoginInteractor.swift in Sources */,
 				52D00BB629C2330E0048FF5F /* WelcomePresenter.swift in Sources */,
 				52D00BA929C1FE070048FF5F /* LoginPresenter.swift in Sources */,
+				52D00BDD29C27CB50048FF5F /* HomeViewController.swift in Sources */,
 				52D00BC629C2347A0048FF5F /* RegisterRouter.swift in Sources */,
 				52D00BBA29C2330E0048FF5F /* WelcomeRouter.swift in Sources */,
+				524AF11C29C2FC7F00F50BEF /* HomeTableViewCell.swift in Sources */,
 				52D00BCE29C235920048FF5F /* VerifyPresenter.swift in Sources */,
 				52D00BD029C235920048FF5F /* VerifyModels.swift in Sources */,
 				52DC3A4E29BD501E00FB4228 /* UIViewController+Ext.swift in Sources */,
@@ -510,8 +588,11 @@
 				52AD0E9329BFD34900FB0006 /* Endpoint.swift in Sources */,
 				524E8AB329BF946400E05337 /* RequestError.swift in Sources */,
 				52D00BB729C2330E0048FF5F /* WelcomeInteractor.swift in Sources */,
+				52D00BDF29C27CB60048FF5F /* HomeInteractor.swift in Sources */,
 				52E21F3B29BA83240086553E /* WelcomeViewController.swift in Sources */,
 				5293981A298FC845006D5060 /* AppDelegate.swift in Sources */,
+				52D00BE129C27CB60048FF5F /* HomeWorker.swift in Sources */,
+				52D00BE229C27CB60048FF5F /* HomeRouter.swift in Sources */,
 				524E8AB129BF938F00E05337 /* RequestMethod.swift in Sources */,
 				52E21F4129BA9A450086553E /* LoginViewController.swift in Sources */,
 				529F425729BEFBED00B27CD1 /* UIView+Ext.swift in Sources */,
@@ -522,13 +603,16 @@
 				52D00BAB29C1FE070048FF5F /* LoginModels.swift in Sources */,
 				52D00BB929C2330E0048FF5F /* WelcomeWorker.swift in Sources */,
 				52D00BC229C2347A0048FF5F /* RegisterPresenter.swift in Sources */,
-				52DC3A4A29BD06EF00FB4228 /* Color+Ext.swift in Sources */,
+				52DC3A4A29BD06EF00FB4228 /* UIColor+Ext.swift in Sources */,
+				524AF12029C2FC9A00F50BEF /* HomeCollectionViewCell.swift in Sources */,
+				52D00BDE29C27CB50048FF5F /* HomePresenter.swift in Sources */,
 				52D00BCF29C235920048FF5F /* VerifyInteractor.swift in Sources */,
 				52D00BAC29C1FE070048FF5F /* LoginWorker.swift in Sources */,
 				52D00BC329C2347A0048FF5F /* RegisterInteractor.swift in Sources */,
 				52D00BAD29C1FE070048FF5F /* LoginRouter.swift in Sources */,
 				52D00BD129C235920048FF5F /* VerifyWorker.swift in Sources */,
 				52DC3A4C29BD3CB100FB4228 /* VerifyViewController.swift in Sources */,
+				52D00BE029C27CB60048FF5F /* HomeModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

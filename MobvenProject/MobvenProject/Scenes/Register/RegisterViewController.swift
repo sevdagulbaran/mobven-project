@@ -34,7 +34,7 @@ final class RegisterViewController: UIViewController, RegisterDisplayLogic {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+      
     }
     
     required init?(coder aDecoder: NSCoder) {

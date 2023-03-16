@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCollectionViewCell" id="gTV-IL-0wX" customClass="HomeCollectionViewCell" customModule="MobvenProjectDev" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="210" height="134"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="210" height="134"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileImage" translatesAutoresizingMaskIntoConstraints="NO" id="3XU-TY-1zS">
+                        <rect key="frame" x="14" y="12" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="eXr-Gp-i5P"/>
+                            <constraint firstAttribute="height" constant="40" id="q0R-UM-04d"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Highland Collage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ych-kn-lva">
+                        <rect key="frame" x="59.999999999999993" y="30" width="99.333333333333314" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="LkI-YK-bQs"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="11"/>
+                        <color key="textColor" name="Blue-Dark"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RHT-Hp-RjL">
+                        <rect key="frame" x="179" y="15" width="16" height="13"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fY4-m7-cFU">
+                                <rect key="frame" x="3.0000000000000004" y="1" width="7.6666666666666679" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="0Sw-Im-zVw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="White"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="Red"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16" id="6u5-ib-QjI"/>
+                            <constraint firstItem="fY4-m7-cFU" firstAttribute="top" secondItem="RHT-Hp-RjL" secondAttribute="top" constant="1" id="U6A-zA-E48"/>
+                            <constraint firstItem="fY4-m7-cFU" firstAttribute="leading" secondItem="RHT-Hp-RjL" secondAttribute="leading" constant="3" id="h2J-qG-re1"/>
+                            <constraint firstAttribute="height" constant="13" id="vhp-Vx-oTz"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" name="White"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="RHT-Hp-RjL" secondAttribute="trailing" constant="15" id="DCy-QD-lB2"/>
+                <constraint firstItem="RHT-Hp-RjL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="Fo7-cP-arM"/>
+                <constraint firstItem="3XU-TY-1zS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="14" id="IpN-IB-HqR"/>
+                <constraint firstItem="3XU-TY-1zS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="12" id="K7E-9I-9rv"/>
+                <constraint firstItem="Ych-kn-lva" firstAttribute="leading" secondItem="3XU-TY-1zS" secondAttribute="trailing" constant="6" id="Nd3-BG-eLu"/>
+                <constraint firstItem="Ych-kn-lva" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="30" id="tbs-WI-SAf"/>
+            </constraints>
+            <point key="canvasLocation" x="126.71755725190839" y="-12.67605633802817"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="profileImage" width="120" height="120"/>
+        <namedColor name="Blue-Dark">
+            <color red="0.10196078431372549" green="0.066666666666666666" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Red">
+            <color red="0.97647058823529409" green="0.2196078431372549" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
