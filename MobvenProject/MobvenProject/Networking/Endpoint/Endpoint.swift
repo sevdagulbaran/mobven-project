@@ -11,6 +11,7 @@ public protocol Endpoint {
     var scheme: String { get }
     var host: String { get }
     var path: String { get }
+    var port: Int { get }
     var method: RequestMethod { get }
     var header: [String: String]? { get }
     var body: [String: String]? { get }
@@ -24,5 +25,9 @@ extension Endpoint {
 
     public var host: String {
         return "momentumv2.mobven.com"
+    }
+    
+    public var port: Int {
+        return 7076
     }
 }

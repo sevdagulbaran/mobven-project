@@ -55,6 +55,9 @@
 		52D00BE029C27CB60048FF5F /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D00BD929C27CB50048FF5F /* HomeModels.swift */; };
 		52D00BE129C27CB60048FF5F /* HomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D00BDA29C27CB50048FF5F /* HomeWorker.swift */; };
 		52D00BE229C27CB60048FF5F /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D00BDB29C27CB50048FF5F /* HomeRouter.swift */; };
+		52D0F1CC29C392DB00F03533 /* AllGroupsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D0F1CB29C392DB00F03533 /* AllGroupsEndpoint.swift */; };
+		52D0F1CF29C3944A00F03533 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D0F1CE29C3944A00F03533 /* NetworkConstants.swift */; };
+		52D0F1D129C397AE00F03533 /* AllGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D0F1D029C397AE00F03533 /* AllGroups.swift */; };
 		52DC3A4A29BD06EF00FB4228 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC3A4929BD06EF00FB4228 /* UIColor+Ext.swift */; };
 		52DC3A4C29BD3CB100FB4228 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC3A4B29BD3CB100FB4228 /* VerifyViewController.swift */; };
 		52DC3A4E29BD501E00FB4228 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC3A4D29BD501E00FB4228 /* UIViewController+Ext.swift */; };
@@ -139,6 +142,9 @@
 		52D00BD929C27CB50048FF5F /* HomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
 		52D00BDA29C27CB50048FF5F /* HomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorker.swift; sourceTree = "<group>"; };
 		52D00BDB29C27CB50048FF5F /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		52D0F1CB29C392DB00F03533 /* AllGroupsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupsEndpoint.swift; sourceTree = "<group>"; };
+		52D0F1CE29C3944A00F03533 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		52D0F1D029C397AE00F03533 /* AllGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroups.swift; sourceTree = "<group>"; };
 		52DC3A4929BD06EF00FB4228 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		52DC3A4B29BD3CB100FB4228 /* VerifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
 		52DC3A4D29BD501E00FB4228 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
@@ -206,6 +212,8 @@
 		524E8AAF29BF937300E05337 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				52D0F1CD29C3943100F03533 /* Constants */,
+				52D0F1CA29C3926F00F03533 /* Responses */,
 				52D00BD329C263860048FF5F /* Requests */,
 				52AD0E9129BFD33600FB0006 /* Endpoint */,
 				52AD0E8F29BFD1E100FB0006 /* HTTPClient.swift */,
@@ -332,6 +340,7 @@
 			isa = PBXGroup;
 			children = (
 				52AD0E9229BFD34900FB0006 /* Endpoint.swift */,
+				52D0F1CB29C392DB00F03533 /* AllGroupsEndpoint.swift */,
 			);
 			path = Endpoint;
 			sourceTree = "<group>";
@@ -358,6 +367,22 @@
 				52D00BDB29C27CB50048FF5F /* HomeRouter.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		52D0F1CA29C3926F00F03533 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				52D0F1D029C397AE00F03533 /* AllGroups.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		52D0F1CD29C3943100F03533 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				52D0F1CE29C3944A00F03533 /* NetworkConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		52DC3A4729BD06CF00FB4228 /* Utils */ = {
@@ -582,6 +607,7 @@
 				52D00BCE29C235920048FF5F /* VerifyPresenter.swift in Sources */,
 				52D00BD029C235920048FF5F /* VerifyModels.swift in Sources */,
 				52DC3A4E29BD501E00FB4228 /* UIViewController+Ext.swift in Sources */,
+				52D0F1CF29C3944A00F03533 /* NetworkConstants.swift in Sources */,
 				52FB8CE429B744610021D809 /* RegisterViewController.swift in Sources */,
 				52D00BC529C2347A0048FF5F /* RegisterWorker.swift in Sources */,
 				52AD0E9029BFD1E100FB0006 /* HTTPClient.swift in Sources */,
@@ -590,12 +616,14 @@
 				52D00BB729C2330E0048FF5F /* WelcomeInteractor.swift in Sources */,
 				52D00BDF29C27CB60048FF5F /* HomeInteractor.swift in Sources */,
 				52E21F3B29BA83240086553E /* WelcomeViewController.swift in Sources */,
+				52D0F1D129C397AE00F03533 /* AllGroups.swift in Sources */,
 				5293981A298FC845006D5060 /* AppDelegate.swift in Sources */,
 				52D00BE129C27CB60048FF5F /* HomeWorker.swift in Sources */,
 				52D00BE229C27CB60048FF5F /* HomeRouter.swift in Sources */,
 				524E8AB129BF938F00E05337 /* RequestMethod.swift in Sources */,
 				52E21F4129BA9A450086553E /* LoginViewController.swift in Sources */,
 				529F425729BEFBED00B27CD1 /* UIView+Ext.swift in Sources */,
+				52D0F1CC29C392DB00F03533 /* AllGroupsEndpoint.swift in Sources */,
 				5293981C298FC845006D5060 /* SceneDelegate.swift in Sources */,
 				52D00BB829C2330E0048FF5F /* WelcomeModels.swift in Sources */,
 				52D00BC429C2347A0048FF5F /* RegisterModels.swift in Sources */,
