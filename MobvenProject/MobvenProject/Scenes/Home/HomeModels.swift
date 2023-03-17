@@ -8,9 +8,9 @@
 import Foundation
 
 // swiftlint:disable nesting
-enum Home {
+enum Groups {
     
-    enum Case {
+    enum Fetch {
         
         struct Request {
             
@@ -22,9 +22,24 @@ enum Home {
         
         struct ViewModel {
             
+            struct Group {
+                let name: String
+                let groupPhoto: String?
+                let users: [User]?
+                let lastMessage: LastMessage?
+            }
+            
+            struct User {
+                let nameSurname: String
+                let profilePhoto: String?
+                let title: String
+            }
+            
+            struct LastMessage {
+                let fromUsername: String
+                let message: String
+            }
         }
-        
     }
-    
 }
 // swiftlint:enable nesting

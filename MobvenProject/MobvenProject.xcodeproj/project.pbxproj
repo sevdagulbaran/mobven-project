@@ -11,6 +11,7 @@
 		524AF11D29C2FC7F00F50BEF /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 524AF11B29C2FC7F00F50BEF /* HomeTableViewCell.xib */; };
 		524AF12029C2FC9A00F50BEF /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524AF11E29C2FC9A00F50BEF /* HomeCollectionViewCell.swift */; };
 		524AF12129C2FC9A00F50BEF /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 524AF11F29C2FC9A00F50BEF /* HomeCollectionViewCell.xib */; };
+		524DA4B129C4E407003C49C2 /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524DA4B029C4E407003C49C2 /* UIImageView+Ext.swift */; };
 		524E8AB129BF938F00E05337 /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E8AB029BF938F00E05337 /* RequestMethod.swift */; };
 		524E8AB329BF946400E05337 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E8AB229BF946400E05337 /* RequestError.swift */; };
 		5293981A298FC845006D5060 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52939819298FC845006D5060 /* AppDelegate.swift */; };
@@ -92,6 +93,7 @@
 		524AF11B29C2FC7F00F50BEF /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		524AF11E29C2FC9A00F50BEF /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		524AF11F29C2FC9A00F50BEF /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		524DA4B029C4E407003C49C2 /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
 		524E8AB029BF938F00E05337 /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
 		524E8AB229BF946400E05337 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		52939816298FC845006D5060 /* MobvenProjectDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobvenProjectDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -399,6 +401,7 @@
 				52DC3A4929BD06EF00FB4228 /* UIColor+Ext.swift */,
 				52DC3A4D29BD501E00FB4228 /* UIViewController+Ext.swift */,
 				529F425629BEFBED00B27CD1 /* UIView+Ext.swift */,
+				524DA4B029C4E407003C49C2 /* UIImageView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -618,6 +621,7 @@
 				52E21F3B29BA83240086553E /* WelcomeViewController.swift in Sources */,
 				52D0F1D129C397AE00F03533 /* AllGroups.swift in Sources */,
 				5293981A298FC845006D5060 /* AppDelegate.swift in Sources */,
+				524DA4B129C4E407003C49C2 /* UIImageView+Ext.swift in Sources */,
 				52D00BE129C27CB60048FF5F /* HomeWorker.swift in Sources */,
 				52D00BE229C27CB60048FF5F /* HomeRouter.swift in Sources */,
 				524E8AB129BF938F00E05337 /* RequestMethod.swift in Sources */,
