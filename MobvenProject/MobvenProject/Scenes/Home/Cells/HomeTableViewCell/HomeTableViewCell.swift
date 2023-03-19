@@ -20,14 +20,16 @@ final class HomeTableViewCell: UITableViewCell {
     }
  
     
-    func configureCell(viewModel: Groups.Fetch.ViewModel.User) {
-        DispatchQueue.main.async {
-            self.namaLabel?.text = viewModel.nameSurname
-            self.messageLabel?.text = viewModel.title
-            //momentumv2.mobven.com:7076/E2EE07CD-BC70-4E44-BD0C-D26448F2DF3B.jpg
-            guard let profilePhoto = viewModel.profilePhoto else { return}
-            self.profileImage.loadFrom(stringURL: profilePhoto)
+    func configureCell(viewModel: Groups.Fetch.ViewModel.Group) {
+        
+            viewModel.users?.forEach { user in
+                namaLabel?.text = user.nameSurname
+                messageLabel?.text = user.title
+            }
            
-        }
+            //momentumv2.mobven.com:7076/E2EE07CD-BC70-4E44-BD0C-D26448F2DF3B.jpg
+            //guard let profilePhoto = viewModel.profilePhoto else { return}
+            //self.profileImage.loadFrom(stringURL: profilePhoto)
+           
     }
 }

@@ -25,6 +25,7 @@ public struct AllGroupsResponse: Codable {
         public let id: String
         public let name: String
         public let createdAt: String
+        public let groupPhoto: String?
         public let users: [User]
         public let updatedAt: String
         public let lastMessage: LastMessage?

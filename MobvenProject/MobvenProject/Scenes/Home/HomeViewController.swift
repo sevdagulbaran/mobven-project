@@ -8,7 +8,7 @@
 import UIKit
 
 protocol HomeDisplayLogic: AnyObject {
-    func displayUsers(userViewModels: [Groups.Fetch.ViewModel.User])
+    func displayGroups(groupViewModels: [Groups.Fetch.ViewModel.Group])
     func displayErrorMessage(_ errorMessage: String)
 }
 
@@ -16,14 +16,22 @@ final class HomeViewController: UIViewController {
     
     //MARK: - Properties
     
+    @IBOutlet private weak var tableContainerView: UIView!
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var collectionView: UICollectionView!
+    
     
     var interactor: HomeBusinessLogic?
     var router: (HomeRoutingLogic & HomeDataPassing)?
     
-    var usersViewModel: [Groups.Fetch.ViewModel.User]?
-    
+    var groupsViewModels: [Groups.Fetch.ViewModel.Group]? {
+        didSet {
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+                self.tableView.reloadData()
+            }
+        }
+    }
     
     // MARK: Object lifecycle
     
@@ -59,39 +67,73 @@ final class HomeViewController: UIViewController {
         router.dataStore = interactor
     }
     
-    func setupView(){
+    private func setupView(){
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(CustomHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "CustomHeaderView")
+        collectionView.register(UINib(nibName: "HomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HomeCollectionViewCell")
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeTableViewCell")
         tableView.separatorStyle = .none
-        tableView.rowHeight = 80
+        tableContainerView.roundCorner([.topLeft,.topRight], radius: 45)
+        
     }
 }
 
-extension HomeViewController: HomeDisplayLogic {
+//MARK: - HomeDisplayLogic
 
-    func displayUsers(userViewModels: [Groups.Fetch.ViewModel.User]) {
-        usersViewModel = userViewModels
-        DispatchQueue.main.async { 
-            self.tableView.reloadData()
-        }
+extension HomeViewController: HomeDisplayLogic {
+    
+    func displayGroups(groupViewModels: [Groups.Fetch.ViewModel.Group]) {
+        groupsViewModels = groupViewModels
+    
     }
     
     func displayErrorMessage(_ errorMessage: String) {
-        print("err")
+        //TODO: Added Alert
+        print("session expired.")
     }
 }
 
+//MARK: - UICollectionView
+
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+         groupsViewModels?.count ?? 0
+    }
+   
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionViewCell", for: indexPath) as? HomeCollectionViewCell else { return UICollectionViewCell() }
+        guard let model = groupsViewModels?[indexPath.row] else { return cell }
+        cell.setCell(group: model)
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+           CGSize(width: 210, height: 134)
+       }
+}
+
+//MARK: - UITableView
+
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return usersViewModel?.count ?? 0
+        groupsViewModels?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell", for: indexPath) as? HomeTableViewCell else { return UITableViewCell() }
         
-        guard let model = usersViewModel?[indexPath.row] else { return cell }
+        guard let model = groupsViewModels?[indexPath.row] else { return cell }
         cell.configureCell(viewModel: model)
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
 }
+
+

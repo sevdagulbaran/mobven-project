@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		521D178829C6768700FB6AFF /* CustomHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521D178729C6768700FB6AFF /* CustomHeaderView.swift */; };
 		524AF11C29C2FC7F00F50BEF /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524AF11A29C2FC7F00F50BEF /* HomeTableViewCell.swift */; };
 		524AF11D29C2FC7F00F50BEF /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 524AF11B29C2FC7F00F50BEF /* HomeTableViewCell.xib */; };
 		524AF12029C2FC9A00F50BEF /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524AF11E29C2FC9A00F50BEF /* HomeCollectionViewCell.swift */; };
@@ -89,6 +90,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		521D178729C6768700FB6AFF /* CustomHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderView.swift; sourceTree = "<group>"; };
 		524AF11A29C2FC7F00F50BEF /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		524AF11B29C2FC7F00F50BEF /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		524AF11E29C2FC9A00F50BEF /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 			children = (
 				524AF11E29C2FC9A00F50BEF /* HomeCollectionViewCell.swift */,
 				524AF11F29C2FC9A00F50BEF /* HomeCollectionViewCell.xib */,
+				521D178729C6768700FB6AFF /* CustomHeaderView.swift */,
 			);
 			path = HomeCollectionViewCell;
 			sourceTree = "<group>";
@@ -634,6 +637,7 @@
 				52D00BD229C235920048FF5F /* VerifyRouter.swift in Sources */,
 				52D00BAB29C1FE070048FF5F /* LoginModels.swift in Sources */,
 				52D00BB929C2330E0048FF5F /* WelcomeWorker.swift in Sources */,
+				521D178829C6768700FB6AFF /* CustomHeaderView.swift in Sources */,
 				52D00BC229C2347A0048FF5F /* RegisterPresenter.swift in Sources */,
 				52DC3A4A29BD06EF00FB4228 /* UIColor+Ext.swift in Sources */,
 				524AF12029C2FC9A00F50BEF /* HomeCollectionViewCell.swift in Sources */,

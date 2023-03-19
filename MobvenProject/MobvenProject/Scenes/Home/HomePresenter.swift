@@ -10,6 +10,7 @@ import Foundation
 protocol HomePresentationLogic: AnyObject {
     func presentGroups(response: [AllGroupsResponse.Group])
     func presentErrorMessage(errorMessage: String)
+    
 }
 
 final class HomePresenter: HomePresentationLogic {
@@ -17,20 +18,29 @@ final class HomePresenter: HomePresentationLogic {
     weak var viewController: HomeDisplayLogic?
     
     func presentGroups(response: [AllGroupsResponse.Group]) {
-        var userViewModels: [Groups.Fetch.ViewModel.User] = []
+        
+        var groupsViewModels: [Groups.Fetch.ViewModel.Group] = []
         
         response.forEach { group in
             let users = group.users.map({ user in
                 
-                let userViewModel = Groups.Fetch.ViewModel.User(nameSurname: user.nameSurname,
+            return Groups.Fetch.ViewModel.User(nameSurname: user.nameSurname,
                                                              profilePhoto: user.profilePhoto,
                                                              title: user.title)
-                print(userViewModel)
-                userViewModels.append(userViewModel)
-                return userViewModel
+             
+                
             })
+            
+            let lastMessage = Groups.Fetch.ViewModel.LastMessage(
+                          fromUsername: group.lastMessage?.from.nameSurname ?? "No messages",
+                          message: group.lastMessage?.message ?? "")
+                      
+            groupsViewModels.append(Groups.Fetch.ViewModel.Group(name: group.name ,
+                                                               groupPhoto: group.groupPhoto,
+                                                                            users: users,
+                                                                            lastMessage: lastMessage))
         }
-        self.viewController?.displayUsers(userViewModels: userViewModels)
+        self.viewController?.displayGroups(groupViewModels: groupsViewModels)
         
     }
     
