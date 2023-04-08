@@ -88,11 +88,12 @@ final class LoginViewController: UIViewController, LoginDisplayLogic {
     //MARK: - Actions
     
     @IBAction private func saveNumberTapped(_ sender: UIButton) {
-        if phoneNumberTextField.text?.count == 11 {
-            router?.goToVerify()
-        } else {
-            showAlert(message: "Please enter a valid 11 digit phone number.")
-        }
+         router?.goToVerify()
+//        if phoneNumberTextField.text?.count == 11 {
+//
+//        } else {
+//            showAlert(message: "Please enter a valid 11 digit phone number.")
+//        }
     }
 }
 // MARK: - UITextFieldDelegate

@@ -161,6 +161,7 @@ final class VerifyViewController: UIViewController, VerifyDisplayLogic {
     @IBAction private func saveVerifyCodeTapped(_ sender: UIButton) {
         verifyOTPCode()
         clearTextField()
+        router?.goToHome()
     }
 }
 

@@ -5,7 +5,6 @@
 //  Created by Sevda Gul Baran on 13.03.2023.
 //
 
-import UIKit
 
 public enum RequestMethod: String {
     case delete = "DELETE"
