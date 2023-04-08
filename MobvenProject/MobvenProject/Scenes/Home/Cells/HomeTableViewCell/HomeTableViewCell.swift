@@ -25,6 +25,7 @@ final class HomeTableViewCell: UITableViewCell {
             viewModel.users?.forEach { user in
                 namaLabel?.text = user.nameSurname
                 messageLabel?.text = user.title
+                
             }
            
             //momentumv2.mobven.com:7076/E2EE07CD-BC70-4E44-BD0C-D26448F2DF3B.jpg

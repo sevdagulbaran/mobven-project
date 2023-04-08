@@ -70,7 +70,6 @@ final class HomeViewController: UIViewController {
     private func setupView(){
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(CustomHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "CustomHeaderView")
         collectionView.register(UINib(nibName: "HomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HomeCollectionViewCell")
         
         tableView.delegate = self

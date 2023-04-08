@@ -38,6 +38,5 @@ final class HomeCollectionViewCell: UICollectionViewCell {
         groupNameLabel.text = group.name
         guard let message = group.lastMessage else { return }
         messageLabel.attributedText = usernameAndMessageAttributedText(for: message)
-        
     }
 }
