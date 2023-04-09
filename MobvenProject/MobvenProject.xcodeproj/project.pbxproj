@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		521DB49929E22C4F00F5F567 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DB49829E22C4F00F5F567 /* Login.swift */; };
 		521DB49C29E22E3F00F5F567 /* LoginEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DB49B29E22E3F00F5F567 /* LoginEndpoint.swift */; };
+		521DB4B629E362FA00F5F567 /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521DB4AF29E362FA00F5F567 /* WebView.storyboard */; };
+		521DB4B729E362FA00F5F567 /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DB4B029E362FA00F5F567 /* WebViewViewController.swift */; };
+		521DB4B829E362FA00F5F567 /* WebViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DB4B129E362FA00F5F567 /* WebViewPresenter.swift */; };
+		521DB4B929E362FA00F5F567 /* WebViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DB4B229E362FA00F5F567 /* WebViewInteractor.swift */; };
+		521DB4BA29E362FA00F5F567 /* WebViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DB4B329E362FA00F5F567 /* WebViewModels.swift */; };
+		521DB4BB29E362FA00F5F567 /* WebViewWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DB4B429E362FA00F5F567 /* WebViewWorker.swift */; };
+		521DB4BC29E362FA00F5F567 /* WebViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DB4B529E362FA00F5F567 /* WebViewRouter.swift */; };
 		524AF11C29C2FC7F00F50BEF /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524AF11A29C2FC7F00F50BEF /* HomeTableViewCell.swift */; };
 		524AF11D29C2FC7F00F50BEF /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 524AF11B29C2FC7F00F50BEF /* HomeTableViewCell.xib */; };
 		524AF12029C2FC9A00F50BEF /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524AF11E29C2FC9A00F50BEF /* HomeCollectionViewCell.swift */; };
@@ -69,6 +76,13 @@
 		52E21F3E29BA8ADC0086553E /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52FB8CEF29B786010021D809 /* Montserrat-Medium.ttf */; };
 		52E21F3F29BA8B010086553E /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52FB8CF029B786010021D809 /* Montserrat-Regular.ttf */; };
 		52E21F4129BA9A450086553E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E21F4029BA9A450086553E /* LoginViewController.swift */; };
+		52E6345C29E3688C00F7BCEF /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E6345529E3688C00F7BCEF /* Profile.storyboard */; };
+		52E6345D29E3688C00F7BCEF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6345629E3688C00F7BCEF /* ProfileViewController.swift */; };
+		52E6345E29E3688C00F7BCEF /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6345729E3688C00F7BCEF /* ProfilePresenter.swift */; };
+		52E6345F29E3688C00F7BCEF /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6345829E3688C00F7BCEF /* ProfileInteractor.swift */; };
+		52E6346029E3688C00F7BCEF /* ProfileModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6345929E3688C00F7BCEF /* ProfileModels.swift */; };
+		52E6346129E3688C00F7BCEF /* ProfileWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6345A29E3688C00F7BCEF /* ProfileWorker.swift */; };
+		52E6346229E3688C00F7BCEF /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6345B29E3688C00F7BCEF /* ProfileRouter.swift */; };
 		52FB8CE429B744610021D809 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FB8CE329B744610021D809 /* RegisterViewController.swift */; };
 		52FB8CE629B74BDB0021D809 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52FB8CE529B74BDB0021D809 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
@@ -93,6 +107,13 @@
 /* Begin PBXFileReference section */
 		521DB49829E22C4F00F5F567 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		521DB49B29E22E3F00F5F567 /* LoginEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEndpoint.swift; sourceTree = "<group>"; };
+		521DB4AF29E362FA00F5F567 /* WebView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebView.storyboard; sourceTree = "<group>"; };
+		521DB4B029E362FA00F5F567 /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
+		521DB4B129E362FA00F5F567 /* WebViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewPresenter.swift; sourceTree = "<group>"; };
+		521DB4B229E362FA00F5F567 /* WebViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewInteractor.swift; sourceTree = "<group>"; };
+		521DB4B329E362FA00F5F567 /* WebViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewModels.swift; sourceTree = "<group>"; };
+		521DB4B429E362FA00F5F567 /* WebViewWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewWorker.swift; sourceTree = "<group>"; };
+		521DB4B529E362FA00F5F567 /* WebViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewRouter.swift; sourceTree = "<group>"; };
 		524AF11A29C2FC7F00F50BEF /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		524AF11B29C2FC7F00F50BEF /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		524AF11E29C2FC9A00F50BEF /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -156,6 +177,13 @@
 		52DC3A4D29BD501E00FB4228 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		52E21F3A29BA83240086553E /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		52E21F4029BA9A450086553E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		52E6345529E3688C00F7BCEF /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		52E6345629E3688C00F7BCEF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		52E6345729E3688C00F7BCEF /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		52E6345829E3688C00F7BCEF /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		52E6345929E3688C00F7BCEF /* ProfileModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModels.swift; sourceTree = "<group>"; };
+		52E6345A29E3688C00F7BCEF /* ProfileWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileWorker.swift; sourceTree = "<group>"; };
+		52E6345B29E3688C00F7BCEF /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
 		52FB8CE329B744610021D809 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		52FB8CE529B74BDB0021D809 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		52FB8CEF29B786010021D809 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Medium.ttf"; path = "../../../../../../../Downloads/Montserrat/static/Montserrat-Medium.ttf"; sourceTree = "<group>"; };
@@ -188,6 +216,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		521DB49D29E35D7700F5F567 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				521DB4AC29E3629700F5F567 /* WebView */,
+				52E6345529E3688C00F7BCEF /* Profile.storyboard */,
+				52E6345629E3688C00F7BCEF /* ProfileViewController.swift */,
+				52E6345729E3688C00F7BCEF /* ProfilePresenter.swift */,
+				52E6345829E3688C00F7BCEF /* ProfileInteractor.swift */,
+				52E6345929E3688C00F7BCEF /* ProfileModels.swift */,
+				52E6345A29E3688C00F7BCEF /* ProfileWorker.swift */,
+				52E6345B29E3688C00F7BCEF /* ProfileRouter.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		521DB4AC29E3629700F5F567 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				521DB4AF29E362FA00F5F567 /* WebView.storyboard */,
+				521DB4B029E362FA00F5F567 /* WebViewViewController.swift */,
+				521DB4B129E362FA00F5F567 /* WebViewPresenter.swift */,
+				521DB4B229E362FA00F5F567 /* WebViewInteractor.swift */,
+				521DB4B329E362FA00F5F567 /* WebViewModels.swift */,
+				521DB4B429E362FA00F5F567 /* WebViewWorker.swift */,
+				521DB4B529E362FA00F5F567 /* WebViewRouter.swift */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
 		524AF11929C2FC5D00F50BEF /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -324,6 +381,7 @@
 		52939856298FD047006D5060 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				521DB49D29E35D7700F5F567 /* Profile */,
 				52D00BD429C27CA40048FF5F /* Home */,
 				525BFEC029BFB16900929FC0 /* Verify */,
 				52E21F4229BA9A4F0086553E /* Login */,
@@ -570,6 +628,7 @@
 			files = (
 				52D00BA729C1FE070048FF5F /* Login.storyboard in Resources */,
 				52E21F3D29BA8AD50086553E /* Montserrat-Bold.ttf in Resources */,
+				521DB4B629E362FA00F5F567 /* WebView.storyboard in Resources */,
 				52939826298FC847006D5060 /* LaunchScreen.storyboard in Resources */,
 				52D00BDC29C27CB50048FF5F /* Home.storyboard in Resources */,
 				52E21F3F29BA8B010086553E /* Montserrat-Regular.ttf in Resources */,
@@ -577,6 +636,7 @@
 				52D00BB529C2330E0048FF5F /* Welcome.storyboard in Resources */,
 				52939823298FC847006D5060 /* Assets.xcassets in Resources */,
 				524AF11D29C2FC7F00F50BEF /* HomeTableViewCell.xib in Resources */,
+				52E6345C29E3688C00F7BCEF /* Profile.storyboard in Resources */,
 				52E21F3E29BA8ADC0086553E /* Montserrat-Medium.ttf in Resources */,
 				52D00BCD29C235920048FF5F /* Verify.storyboard in Resources */,
 				524AF12129C2FC9A00F50BEF /* HomeCollectionViewCell.xib in Resources */,
@@ -606,20 +666,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				521DB4BC29E362FA00F5F567 /* WebViewRouter.swift in Sources */,
 				52D00BAA29C1FE070048FF5F /* LoginInteractor.swift in Sources */,
+				521DB4B829E362FA00F5F567 /* WebViewPresenter.swift in Sources */,
 				52D00BB629C2330E0048FF5F /* WelcomePresenter.swift in Sources */,
+				521DB4BB29E362FA00F5F567 /* WebViewWorker.swift in Sources */,
 				52D00BA929C1FE070048FF5F /* LoginPresenter.swift in Sources */,
+				52E6345F29E3688C00F7BCEF /* ProfileInteractor.swift in Sources */,
+				52E6345D29E3688C00F7BCEF /* ProfileViewController.swift in Sources */,
 				52D00BDD29C27CB50048FF5F /* HomeViewController.swift in Sources */,
 				52D00BC629C2347A0048FF5F /* RegisterRouter.swift in Sources */,
 				52D00BBA29C2330E0048FF5F /* WelcomeRouter.swift in Sources */,
 				524AF11C29C2FC7F00F50BEF /* HomeTableViewCell.swift in Sources */,
+				52E6346029E3688C00F7BCEF /* ProfileModels.swift in Sources */,
 				52D00BCE29C235920048FF5F /* VerifyPresenter.swift in Sources */,
 				52D00BD029C235920048FF5F /* VerifyModels.swift in Sources */,
 				521DB49C29E22E3F00F5F567 /* LoginEndpoint.swift in Sources */,
 				52DC3A4E29BD501E00FB4228 /* UIViewController+Ext.swift in Sources */,
 				52D0F1CF29C3944A00F03533 /* NetworkConstants.swift in Sources */,
+				521DB4B729E362FA00F5F567 /* WebViewViewController.swift in Sources */,
 				52FB8CE429B744610021D809 /* RegisterViewController.swift in Sources */,
 				52D00BC529C2347A0048FF5F /* RegisterWorker.swift in Sources */,
+				521DB4BA29E362FA00F5F567 /* WebViewModels.swift in Sources */,
 				52AD0E9029BFD1E100FB0006 /* HTTPClient.swift in Sources */,
 				52AD0E9329BFD34900FB0006 /* Endpoint.swift in Sources */,
 				524E8AB329BF946400E05337 /* RequestError.swift in Sources */,
@@ -633,6 +701,8 @@
 				52D00BE129C27CB60048FF5F /* HomeWorker.swift in Sources */,
 				52D00BE229C27CB60048FF5F /* HomeRouter.swift in Sources */,
 				524E8AB129BF938F00E05337 /* RequestMethod.swift in Sources */,
+				52E6346129E3688C00F7BCEF /* ProfileWorker.swift in Sources */,
+				52E6345E29E3688C00F7BCEF /* ProfilePresenter.swift in Sources */,
 				52E21F4129BA9A450086553E /* LoginViewController.swift in Sources */,
 				529F425729BEFBED00B27CD1 /* UIView+Ext.swift in Sources */,
 				52D0F1CC29C392DB00F03533 /* AllGroupsEndpoint.swift in Sources */,
@@ -642,6 +712,7 @@
 				52D00BD229C235920048FF5F /* VerifyRouter.swift in Sources */,
 				52D00BAB29C1FE070048FF5F /* LoginModels.swift in Sources */,
 				52D00BB929C2330E0048FF5F /* WelcomeWorker.swift in Sources */,
+				521DB4B929E362FA00F5F567 /* WebViewInteractor.swift in Sources */,
 				52D00BC229C2347A0048FF5F /* RegisterPresenter.swift in Sources */,
 				52DC3A4A29BD06EF00FB4228 /* UIColor+Ext.swift in Sources */,
 				524AF12029C2FC9A00F50BEF /* HomeCollectionViewCell.swift in Sources */,
@@ -651,6 +722,7 @@
 				52D00BC329C2347A0048FF5F /* RegisterInteractor.swift in Sources */,
 				52D00BAD29C1FE070048FF5F /* LoginRouter.swift in Sources */,
 				52D00BD129C235920048FF5F /* VerifyWorker.swift in Sources */,
+				52E6346229E3688C00F7BCEF /* ProfileRouter.swift in Sources */,
 				52DC3A4C29BD3CB100FB4228 /* VerifyViewController.swift in Sources */,
 				52D00BE029C27CB60048FF5F /* HomeModels.swift in Sources */,
 			);

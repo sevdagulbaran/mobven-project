@@ -92,6 +92,9 @@
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button" image="profileImage"/>
+                                <connections>
+                                    <action selector="profileButtonTapped:" destination="qNu-zF-bfV" eventType="touchUpInside" id="amU-DJ-W5N"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DR1-yO-ae1"/>
@@ -119,6 +122,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="OrV-8u-aqi" id="7oA-Lk-6E0"/>
+                        <outlet property="profileButton" destination="5zg-bU-IYi" id="jyH-hg-keZ"/>
                         <outlet property="tableContainerView" destination="2N3-Zn-Upl" id="0aP-W1-hOY"/>
                         <outlet property="tableView" destination="KVu-F7-KUe" id="Pxf-cs-AdH"/>
                     </connections>

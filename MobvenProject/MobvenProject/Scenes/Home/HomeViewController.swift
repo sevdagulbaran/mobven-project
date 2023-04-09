@@ -16,6 +16,7 @@ final class HomeViewController: UIViewController {
     
     //MARK: - Properties
     
+    @IBOutlet private weak var profileButton: UIButton!
     @IBOutlet private weak var tableContainerView: UIView!
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var collectionView: UICollectionView!
@@ -42,7 +43,7 @@ final class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.isNavigationBarHidden = true
+       // navigationController?.isNavigationBarHidden = true
         
         interactor?.fetchGroupsData()
         setupView()
@@ -67,7 +68,6 @@ final class HomeViewController: UIViewController {
         router.viewController = viewController
         router.dataStore = interactor
     }
-    
     private func setupView(){
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -79,6 +79,10 @@ final class HomeViewController: UIViewController {
         tableView.separatorStyle = .none
         tableContainerView.roundCorner([.topLeft,.topRight], radius: 45)
         
+    }
+    
+    @IBAction func profileButtonTapped(_ sender: UIButton) {
+        router?.goToProfile()
     }
 }
 
