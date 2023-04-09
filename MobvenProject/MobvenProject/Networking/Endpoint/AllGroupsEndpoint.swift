@@ -8,16 +8,13 @@
 import Foundation
 
 public enum AllGroupsEndpoint {
-    case allGroups
+    case allGroups(token: String)
 }
 
 extension AllGroupsEndpoint: Endpoint {
     
     public var path: String {
-        switch self {
-        case .allGroups:
-            return NetworkConstants.PATH
-        }
+            return NetworkConstants.PathGroup
     }
     
     public var method: RequestMethod {
@@ -26,19 +23,15 @@ extension AllGroupsEndpoint: Endpoint {
     
     public var header: [String : String]? {
         switch self {
-        case .allGroups:
+        case .allGroups(let token):
             return [
-                "Authorization": "Bearer \(NetworkConstants.AccessToken)",
-                //"Content-Type": "application/json;charset=utf-8"
+                "Authorization": "Bearer \(token)",
             ]
         }
     }
     
     public var body: [String : String]? {
-        switch self {
-        case .allGroups:
             return nil
-        }
     }
     
     public var queryItems: [URLQueryItem]? {

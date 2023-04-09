@@ -42,9 +42,10 @@ final class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.isNavigationBarHidden = true
+        
         interactor?.fetchGroupsData()
         setupView()
-        
     }
     
     required init?(coder aDecoder: NSCoder) {

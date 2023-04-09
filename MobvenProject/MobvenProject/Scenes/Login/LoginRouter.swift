@@ -8,7 +8,7 @@
 import UIKit
 
 protocol LoginRoutingLogic: AnyObject {
-    func goToVerify()
+    func goToHome()
 }
 
 protocol LoginDataPassing: AnyObject {
@@ -19,11 +19,12 @@ final class LoginRouter: LoginRoutingLogic, LoginDataPassing {
     
     weak var viewController: LoginViewController?
     var dataStore: LoginDataStore?
-    
-    func goToVerify() {
-        let storyBoard = UIStoryboard(name: "Verify", bundle: nil)
+
+    func goToHome() {
         
-        guard let destinationViewController = storyBoard.instantiateViewController(withIdentifier: "VerifyViewController") as? VerifyViewController else { return }
+        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+        guard let destinationViewController = storyBoard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController else { return }
+        destinationViewController.router?.dataStore?.authorizedPerson = dataStore?.loginResponse?.body
         
         viewController?.navigationController?.pushViewController(destinationViewController, animated: true)
     }

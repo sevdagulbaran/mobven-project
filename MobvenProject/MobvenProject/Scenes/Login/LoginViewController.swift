@@ -7,16 +7,23 @@
 
 import UIKit
 protocol LoginDisplayLogic: AnyObject {
-    
+    func displayAuthorizedPerson(viewModel: Login.Fetch.ViewModel)
 }
 
-final class LoginViewController: UIViewController, LoginDisplayLogic {
+final class LoginViewController: UIViewController {
     
     var interactor: LoginBusinessLogic?
     var router: (LoginRoutingLogic & LoginDataPassing)?
-    
-    
-    @IBOutlet private weak var phoneNumberTextField: UITextField!
+    var viewModel: Login.Fetch.ViewModel? {
+        didSet {
+            DispatchQueue.main.async {
+                self.router?.goToHome()
+            }
+        }
+    }
+
+    @IBOutlet private weak var emailTextField: UITextField!
+    @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet private weak var termsLabel: UILabel!
     @IBOutlet private weak var saveButton: UIButton!
     
@@ -54,7 +61,7 @@ final class LoginViewController: UIViewController, LoginDisplayLogic {
     // MARK: - Private Methods
     
     private func setupUI() {
-        setupPhoneNumberTextField()
+        setupTextField()
         configureBackButtonTitle("")
         hideKeyboardWhenTappedAround()
         
@@ -73,10 +80,9 @@ final class LoginViewController: UIViewController, LoginDisplayLogic {
         
     }
     
-    private func setupPhoneNumberTextField() {
-        phoneNumberTextField.delegate = self
-        phoneNumberTextField.keyboardType = .numberPad
-        phoneNumberTextField.layer.cornerRadius = 17
+    private func setupTextField() {
+        emailTextField.layer.cornerRadius = 17
+        passwordTextField.layer.cornerRadius = 17
     }
     
     private func showAlert(message: String) {
@@ -84,37 +90,20 @@ final class LoginViewController: UIViewController, LoginDisplayLogic {
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
-    
     //MARK: - Actions
     
     @IBAction private func saveNumberTapped(_ sender: UIButton) {
-         router?.goToVerify()
-//        if phoneNumberTextField.text?.count == 11 {
-//
-//        } else {
-//            showAlert(message: "Please enter a valid 11 digit phone number.")
-//        }
+        guard let email = emailTextField.text, !email.isEmpty,
+                   let password = passwordTextField.text, !password.isEmpty else {
+            showAlert(message: "Email or password is incorrect.")
+                 return
+             }
+             interactor?.login(email: email, password: password)
+         }
+         
+}
+extension LoginViewController: LoginDisplayLogic {
+    func displayAuthorizedPerson(viewModel: Login.Fetch.ViewModel) {
+        self.viewModel = viewModel
     }
 }
-// MARK: - UITextFieldDelegate
-
-extension LoginViewController: UITextFieldDelegate {
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        saveNumberTapped(saveButton)
-        return false
-    }
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let newLength = (textField.text?.count ?? 0) + string.count - range.length
-        if newLength <= 11 && string.rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil {
-            return true
-        }
-        else {
-            showAlert(message: "Phone number cannot exceed 11 characters. Please enter a valid phone number.")
-            return false
-        }
-    }
-}
-
