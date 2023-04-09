@@ -21,10 +21,8 @@ enum Profile {
         }
         
         struct ViewModel {
-      
                 var birthDate: Date?
                 var gender: String?
-            
         }
         
     }

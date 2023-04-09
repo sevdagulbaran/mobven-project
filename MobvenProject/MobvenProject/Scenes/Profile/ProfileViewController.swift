@@ -18,6 +18,20 @@ final class ProfileViewController: UIViewController {
     
     @IBOutlet private weak var modeSwitch: UISwitch!
     
+    let birthDatePicker: UIDatePicker = {
+        let picker = UIDatePicker()
+        picker.datePickerMode = .date
+        picker.translatesAutoresizingMaskIntoConstraints = false
+        return picker
+    }()
+    let genderPickerView: UIPickerView = {
+        let picker = UIPickerView()
+        picker.translatesAutoresizingMaskIntoConstraints = false
+        return picker
+    }()
+    
+    let genderData = ["Male", "Female", "Other"]
+    
     var interactor: ProfileBusinessLogic?
     var router: (ProfileRoutingLogic & ProfileDataPassing)?
     
@@ -26,6 +40,7 @@ final class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         storedMode()
+        setupUI()
     }
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -52,6 +67,24 @@ final class ProfileViewController: UIViewController {
         router.dataStore = interactor
     }
     
+    private func setupUI() {
+        view.addSubview(birthDatePicker)
+        NSLayoutConstraint.activate([
+            birthDatePicker.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            birthDatePicker.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+        
+        genderPickerView.dataSource = self
+        genderPickerView.delegate = self
+        view.addSubview(genderPickerView)
+        NSLayoutConstraint.activate([
+            genderPickerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            genderPickerView.topAnchor.constraint(equalTo: birthDatePicker.bottomAnchor, constant: 20),
+            genderPickerView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
+            genderPickerView.heightAnchor.constraint(equalToConstant: 100)
+        ])
+    }
+    
     private func storedMode() {
         guard let isMode = UserDefaults.standard.object(forKey: "isDarkMode") as? Bool else { return }
         modeSwitch.isOn = isMode
@@ -71,6 +104,27 @@ final class ProfileViewController: UIViewController {
         }
     }
     
+}
+//MARK: - UIPickerViewDataSource, UIPickerViewDelegate
+
+extension ProfileViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return genderData.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return genderData[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let selectedGender = genderData[row]
+        print("Selected gender: \(selectedGender)")
+    }
 }
 
 extension ProfileViewController: ProfileDisplayLogic {

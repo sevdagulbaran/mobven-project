@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -33,9 +32,6 @@
                                     <action selector="openLinkedinButtonTapped:" destination="nxe-uw-h5I" eventType="touchUpInside" id="mho-hh-3gg"/>
                                 </connections>
                             </button>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="AvP-LV-uq4">
-                                <rect key="frame" x="-10" y="233" width="414" height="35"/>
-                            </datePicker>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rNt-8d-BJK">
                                 <rect key="frame" x="356" y="78" width="50" height="30"/>
                                 <constraints>
@@ -50,15 +46,12 @@
                             </switch>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="acR-sl-ate"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="White"/>
                         <constraints>
                             <constraint firstItem="kVQ-M1-o6Z" firstAttribute="top" secondItem="rNt-8d-BJK" secondAttribute="bottom" constant="40" id="7yU-3w-dMy"/>
-                            <constraint firstItem="AvP-LV-uq4" firstAttribute="leading" secondItem="chM-je-gA4" secondAttribute="leading" constant="-10" id="Gz3-Ft-jEG"/>
                             <constraint firstItem="rNt-8d-BJK" firstAttribute="top" secondItem="acR-sl-ate" secondAttribute="top" constant="30" id="IOI-mV-IQ7"/>
                             <constraint firstItem="acR-sl-ate" firstAttribute="trailing" secondItem="kVQ-M1-o6Z" secondAttribute="trailing" constant="10" id="LJZ-vn-wXh"/>
                             <constraint firstItem="kVQ-M1-o6Z" firstAttribute="leading" secondItem="acR-sl-ate" secondAttribute="leading" constant="10" id="eHg-Tp-Spo"/>
-                            <constraint firstItem="AvP-LV-uq4" firstAttribute="top" secondItem="kVQ-M1-o6Z" secondAttribute="bottom" constant="50" id="pch-dD-oAP"/>
-                            <constraint firstItem="acR-sl-ate" firstAttribute="trailing" secondItem="AvP-LV-uq4" secondAttribute="trailing" constant="10" id="peg-ql-wWF"/>
                             <constraint firstItem="acR-sl-ate" firstAttribute="trailing" secondItem="rNt-8d-BJK" secondAttribute="trailing" constant="10" id="sjk-ZI-zBJ"/>
                         </constraints>
                     </view>
@@ -82,8 +75,8 @@
         <namedColor name="Sky-Blue">
             <color red="0.19215686274509805" green="0.77647058823529413" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
