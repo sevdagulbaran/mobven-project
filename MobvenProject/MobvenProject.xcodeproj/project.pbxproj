@@ -76,6 +76,8 @@
 		52E21F3E29BA8ADC0086553E /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52FB8CEF29B786010021D809 /* Montserrat-Medium.ttf */; };
 		52E21F3F29BA8B010086553E /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52FB8CF029B786010021D809 /* Montserrat-Regular.ttf */; };
 		52E21F4129BA9A450086553E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E21F4029BA9A450086553E /* LoginViewController.swift */; };
+		52E3AA7829E37B65005E7359 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E3AA7729E37B65005E7359 /* KeychainHelper.swift */; };
+		52E3AA7C29E37C0C005E7359 /* KeychainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E3AA7B29E37C0C005E7359 /* KeychainConstants.swift */; };
 		52E6345C29E3688C00F7BCEF /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E6345529E3688C00F7BCEF /* Profile.storyboard */; };
 		52E6345D29E3688C00F7BCEF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6345629E3688C00F7BCEF /* ProfileViewController.swift */; };
 		52E6345E29E3688C00F7BCEF /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6345729E3688C00F7BCEF /* ProfilePresenter.swift */; };
@@ -177,6 +179,8 @@
 		52DC3A4D29BD501E00FB4228 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		52E21F3A29BA83240086553E /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		52E21F4029BA9A450086553E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		52E3AA7729E37B65005E7359 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		52E3AA7B29E37C0C005E7359 /* KeychainConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainConstants.swift; sourceTree = "<group>"; };
 		52E6345529E3688C00F7BCEF /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		52E6345629E3688C00F7BCEF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		52E6345729E3688C00F7BCEF /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
@@ -454,6 +458,7 @@
 		52DC3A4729BD06CF00FB4228 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				52E3AA7929E37B7D005E7359 /* Keychain */,
 				52DC3A4829BD06DC00FB4228 /* Extensions */,
 			);
 			path = Utils;
@@ -510,6 +515,23 @@
 				52D00BA629C1FE070048FF5F /* LoginRouter.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		52E3AA7929E37B7D005E7359 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				52E3AA7A29E37BF5005E7359 /* Constants */,
+				52E3AA7729E37B65005E7359 /* KeychainHelper.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		52E3AA7A29E37BF5005E7359 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				52E3AA7B29E37C0C005E7359 /* KeychainConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		52FB8CE729B785810021D809 /* Fonts */ = {
@@ -667,6 +689,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				521DB4BC29E362FA00F5F567 /* WebViewRouter.swift in Sources */,
+				52E3AA7C29E37C0C005E7359 /* KeychainConstants.swift in Sources */,
 				52D00BAA29C1FE070048FF5F /* LoginInteractor.swift in Sources */,
 				521DB4B829E362FA00F5F567 /* WebViewPresenter.swift in Sources */,
 				52D00BB629C2330E0048FF5F /* WelcomePresenter.swift in Sources */,
@@ -709,6 +732,7 @@
 				5293981C298FC845006D5060 /* SceneDelegate.swift in Sources */,
 				52D00BB829C2330E0048FF5F /* WelcomeModels.swift in Sources */,
 				52D00BC429C2347A0048FF5F /* RegisterModels.swift in Sources */,
+				52E3AA7829E37B65005E7359 /* KeychainHelper.swift in Sources */,
 				52D00BD229C235920048FF5F /* VerifyRouter.swift in Sources */,
 				52D00BAB29C1FE070048FF5F /* LoginModels.swift in Sources */,
 				52D00BB929C2330E0048FF5F /* WelcomeWorker.swift in Sources */,
