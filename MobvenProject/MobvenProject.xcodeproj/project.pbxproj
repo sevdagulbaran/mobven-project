@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		521DB49929E22C4F00F5F567 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DB49829E22C4F00F5F567 /* Login.swift */; };
+		521DB49C29E22E3F00F5F567 /* LoginEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DB49B29E22E3F00F5F567 /* LoginEndpoint.swift */; };
 		524AF11C29C2FC7F00F50BEF /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524AF11A29C2FC7F00F50BEF /* HomeTableViewCell.swift */; };
 		524AF11D29C2FC7F00F50BEF /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 524AF11B29C2FC7F00F50BEF /* HomeTableViewCell.xib */; };
 		524AF12029C2FC9A00F50BEF /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524AF11E29C2FC9A00F50BEF /* HomeCollectionViewCell.swift */; };
@@ -89,6 +91,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		521DB49829E22C4F00F5F567 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		521DB49B29E22E3F00F5F567 /* LoginEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEndpoint.swift; sourceTree = "<group>"; };
 		524AF11A29C2FC7F00F50BEF /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		524AF11B29C2FC7F00F50BEF /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		524AF11E29C2FC9A00F50BEF /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -343,6 +347,7 @@
 			children = (
 				52AD0E9229BFD34900FB0006 /* Endpoint.swift */,
 				52D0F1CB29C392DB00F03533 /* AllGroupsEndpoint.swift */,
+				521DB49B29E22E3F00F5F567 /* LoginEndpoint.swift */,
 			);
 			path = Endpoint;
 			sourceTree = "<group>";
@@ -375,6 +380,7 @@
 			isa = PBXGroup;
 			children = (
 				52D0F1D029C397AE00F03533 /* AllGroups.swift */,
+				521DB49829E22C4F00F5F567 /* Login.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -609,6 +615,7 @@
 				524AF11C29C2FC7F00F50BEF /* HomeTableViewCell.swift in Sources */,
 				52D00BCE29C235920048FF5F /* VerifyPresenter.swift in Sources */,
 				52D00BD029C235920048FF5F /* VerifyModels.swift in Sources */,
+				521DB49C29E22E3F00F5F567 /* LoginEndpoint.swift in Sources */,
 				52DC3A4E29BD501E00FB4228 /* UIViewController+Ext.swift in Sources */,
 				52D0F1CF29C3944A00F03533 /* NetworkConstants.swift in Sources */,
 				52FB8CE429B744610021D809 /* RegisterViewController.swift in Sources */,
@@ -617,6 +624,7 @@
 				52AD0E9329BFD34900FB0006 /* Endpoint.swift in Sources */,
 				524E8AB329BF946400E05337 /* RequestError.swift in Sources */,
 				52D00BB729C2330E0048FF5F /* WelcomeInteractor.swift in Sources */,
+				521DB49929E22C4F00F5F567 /* Login.swift in Sources */,
 				52D00BDF29C27CB60048FF5F /* HomeInteractor.swift in Sources */,
 				52E21F3B29BA83240086553E /* WelcomeViewController.swift in Sources */,
 				52D0F1D129C397AE00F03533 /* AllGroups.swift in Sources */,

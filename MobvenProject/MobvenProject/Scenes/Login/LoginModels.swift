@@ -7,24 +7,23 @@
 
 import Foundation
 
-// swiftlint:disable nesting
+
 enum Login {
-    
-    enum Case {
-        
+
+    enum Fetch {
+
         struct Request {
-            
+
         }
-        
+
         struct Response {
-            
+            let loginResponse: LoginResponse
         }
-        
+
         struct ViewModel {
-            
+            let nameSurname: String
+            let email: String
+            let accessToken: String
         }
-        
     }
-    
 }
-// swiftlint:enable nesting

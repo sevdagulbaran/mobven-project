@@ -30,49 +30,10 @@
                                     <constraint firstAttribute="height" constant="370" id="KHh-H6-qcu"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Continue with your phone number" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nT-aC-EPf">
-                                <rect key="frame" x="30" y="148" width="354" height="84"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="84" id="Xr9-Vu-6ga"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="28"/>
-                                <color key="textColor" name="Blue-Dark"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWj-C0-Dkf">
-                                <rect key="frame" x="30" y="245" width="354" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="0D5-lk-CYs"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
-                                <color key="textColor" name="Blue-Light"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byu-ZU-5UB">
-                                <rect key="frame" x="30" y="355" width="94" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail &amp; Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byu-ZU-5UB">
+                                <rect key="frame" x="30" y="162.5" width="111" height="15"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
                                 <color key="textColor" name="Blue-Dark"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   +1-555-4695-846" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E9i-PM-4nd">
-                                <rect key="frame" x="30" y="377" width="354" height="50"/>
-                                <color key="backgroundColor" name="Purple-Soft"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="iks-5t-WQU"/>
-                                </constraints>
-                                <color key="textColor" name="Blue-Dark"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" textContentType="tel"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifj-8t-MDZ">
-                                <rect key="frame" x="30" y="447" width="354" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="5kf-zD-XV0"/>
-                                </constraints>
-                                <string key="text">By click continue you are agree with
-our Terms and Condition</string>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="10"/>
-                                <color key="textColor" name="Blue-Light"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F20-lY-XJ2">
@@ -87,41 +48,84 @@ our Terms and Condition</string>
                                     <action selector="saveNumberTapped:" destination="be7-xY-yCI" eventType="touchUpInside" id="mbG-fK-L1O"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vEl-Fs-P68">
+                                <rect key="frame" x="30" y="197.5" width="354" height="152"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" E-mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E9i-PM-4nd">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
+                                        <color key="backgroundColor" name="Purple-Soft"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="iks-5t-WQU"/>
+                                        </constraints>
+                                        <color key="textColor" name="Blue-Dark"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" textContentType="email"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zdx-ck-HS3">
+                                        <rect key="frame" x="0.0" y="60" width="354" height="50"/>
+                                        <color key="backgroundColor" name="Purple-Soft"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="cSf-bf-04H"/>
+                                        </constraints>
+                                        <color key="textColor" name="Blue-Dark"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifj-8t-MDZ">
+                                        <rect key="frame" x="86.5" y="120" width="181.5" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="5kf-zD-XV0"/>
+                                        </constraints>
+                                        <string key="text">By click continue you are agree with
+our Terms and Condition</string>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="10"/>
+                                        <color key="textColor" name="Blue-Light"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Zdx-ck-HS3" secondAttribute="trailing" id="Ev8-8P-5zZ"/>
+                                    <constraint firstItem="E9i-PM-4nd" firstAttribute="leading" secondItem="vEl-Fs-P68" secondAttribute="leading" id="HdO-i9-CGJ"/>
+                                    <constraint firstItem="Zdx-ck-HS3" firstAttribute="leading" secondItem="vEl-Fs-P68" secondAttribute="leading" id="jr4-2U-7ga"/>
+                                    <constraint firstAttribute="trailing" secondItem="E9i-PM-4nd" secondAttribute="trailing" id="wnG-AY-oLH"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HELLO! " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nT-aC-EPf">
+                                <rect key="frame" x="30" y="88" width="354" height="34.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="28"/>
+                                <color key="textColor" name="Blue-Dark"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GbC-sl-Tfe"/>
                         <color key="backgroundColor" name="White"/>
                         <constraints>
-                            <constraint firstItem="GbC-sl-Tfe" firstAttribute="trailing" secondItem="2nT-aC-EPf" secondAttribute="trailing" constant="30" id="2RZ-ea-tsv"/>
-                            <constraint firstItem="2nT-aC-EPf" firstAttribute="top" secondItem="GbC-sl-Tfe" secondAttribute="top" constant="100" id="BMM-D7-ueH"/>
+                            <constraint firstItem="vEl-Fs-P68" firstAttribute="top" secondItem="byu-ZU-5UB" secondAttribute="bottom" constant="20" id="55x-ar-oBA"/>
+                            <constraint firstItem="byu-ZU-5UB" firstAttribute="leading" secondItem="GbC-sl-Tfe" secondAttribute="leading" constant="30" id="78u-AZ-raO"/>
+                            <constraint firstItem="GbC-sl-Tfe" firstAttribute="trailing" secondItem="2nT-aC-EPf" secondAttribute="trailing" constant="30" id="G4A-CY-Dzc"/>
                             <constraint firstItem="GbC-sl-Tfe" firstAttribute="bottom" secondItem="F20-lY-XJ2" secondAttribute="bottom" constant="30" id="Gct-eY-yI8"/>
-                            <constraint firstItem="ifj-8t-MDZ" firstAttribute="leading" secondItem="GbC-sl-Tfe" secondAttribute="leading" constant="30" id="Jgk-bd-cmf"/>
-                            <constraint firstItem="GbC-sl-Tfe" firstAttribute="trailing" secondItem="PWj-C0-Dkf" secondAttribute="trailing" constant="30" id="JkJ-x7-71N"/>
-                            <constraint firstItem="GbC-sl-Tfe" firstAttribute="trailing" secondItem="E9i-PM-4nd" secondAttribute="trailing" constant="30" id="LZp-RL-thI"/>
-                            <constraint firstItem="byu-ZU-5UB" firstAttribute="leading" secondItem="GbC-sl-Tfe" secondAttribute="leading" constant="30" id="QDV-lY-HCe"/>
-                            <constraint firstItem="2nT-aC-EPf" firstAttribute="leading" secondItem="GbC-sl-Tfe" secondAttribute="leading" constant="30" id="Qz8-Zt-S6N"/>
-                            <constraint firstItem="GbC-sl-Tfe" firstAttribute="trailing" secondItem="ifj-8t-MDZ" secondAttribute="trailing" constant="30" id="TWZ-Vn-k2V"/>
-                            <constraint firstItem="PWj-C0-Dkf" firstAttribute="leading" secondItem="GbC-sl-Tfe" secondAttribute="leading" constant="30" id="WEt-AR-CbM"/>
+                            <constraint firstItem="vEl-Fs-P68" firstAttribute="leading" secondItem="GbC-sl-Tfe" secondAttribute="leading" constant="30" id="HlU-Za-tCg"/>
+                            <constraint firstItem="2nT-aC-EPf" firstAttribute="leading" secondItem="GbC-sl-Tfe" secondAttribute="leading" constant="30" id="Jvk-DB-drh"/>
+                            <constraint firstItem="byu-ZU-5UB" firstAttribute="top" secondItem="2nT-aC-EPf" secondAttribute="bottom" constant="40" id="VYj-lW-2KI"/>
                             <constraint firstAttribute="bottom" secondItem="udi-To-20s" secondAttribute="bottom" id="XQJ-3b-gtZ"/>
-                            <constraint firstItem="E9i-PM-4nd" firstAttribute="top" secondItem="byu-ZU-5UB" secondAttribute="bottom" constant="7" id="Ykc-B9-kLO"/>
                             <constraint firstItem="udi-To-20s" firstAttribute="trailing" secondItem="GbC-sl-Tfe" secondAttribute="trailing" id="ZR6-xO-zPc"/>
+                            <constraint firstItem="2nT-aC-EPf" firstAttribute="top" secondItem="GbC-sl-Tfe" secondAttribute="top" constant="40" id="aeP-i8-kcm"/>
+                            <constraint firstItem="GbC-sl-Tfe" firstAttribute="trailing" secondItem="vEl-Fs-P68" secondAttribute="trailing" constant="30" id="c8g-Ha-cTE"/>
                             <constraint firstItem="GbC-sl-Tfe" firstAttribute="trailing" secondItem="F20-lY-XJ2" secondAttribute="trailing" constant="30" id="cXr-B5-fnZ"/>
-                            <constraint firstItem="PWj-C0-Dkf" firstAttribute="top" secondItem="2nT-aC-EPf" secondAttribute="bottom" constant="13" id="dLq-ac-Oed"/>
-                            <constraint firstItem="ifj-8t-MDZ" firstAttribute="top" secondItem="E9i-PM-4nd" secondAttribute="bottom" constant="20" id="ghk-E7-eL4"/>
-                            <constraint firstItem="E9i-PM-4nd" firstAttribute="leading" secondItem="GbC-sl-Tfe" secondAttribute="leading" constant="30" id="iuY-Em-cwk"/>
-                            <constraint firstItem="byu-ZU-5UB" firstAttribute="top" secondItem="PWj-C0-Dkf" secondAttribute="bottom" constant="70" id="sNP-br-5tA"/>
                             <constraint firstItem="udi-To-20s" firstAttribute="leading" secondItem="GbC-sl-Tfe" secondAttribute="leading" id="wBJ-r1-zgK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gOF-e3-guB"/>
                     <connections>
-                        <outlet property="phoneNumberTextField" destination="E9i-PM-4nd" id="tfm-NI-5tB"/>
+                        <outlet property="emailTextField" destination="E9i-PM-4nd" id="ZGS-UO-h1E"/>
+                        <outlet property="passwordTextField" destination="Zdx-ck-HS3" id="gn4-VQ-HV0"/>
                         <outlet property="saveButton" destination="F20-lY-XJ2" id="2rW-Y2-Lzu"/>
                         <outlet property="termsLabel" destination="ifj-8t-MDZ" id="gnt-Zd-cld"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9rn-jS-G2I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1079" y="-115"/>
+            <point key="canvasLocation" x="1078.2608695652175" y="-115.17857142857142"/>
         </scene>
     </scenes>
     <resources>

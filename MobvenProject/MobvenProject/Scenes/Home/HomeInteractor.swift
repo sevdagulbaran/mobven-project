@@ -9,10 +9,12 @@ import Foundation
 
 protocol HomeBusinessLogic: AnyObject {
     func fetchGroupsData()
+    
 }
 
 protocol HomeDataStore: AnyObject {
     var groups: [AllGroupsResponse.Group]? { get set }
+    var authorizedPerson: LoginResponse.Body? { get set }
 }
 
 final class HomeInteractor: HomeBusinessLogic, HomeDataStore {
@@ -20,9 +22,11 @@ final class HomeInteractor: HomeBusinessLogic, HomeDataStore {
     var presenter: HomePresentationLogic?
     var worker: HomeWorkingLogic = HomeWorker()
     var groups: [AllGroupsResponse.Group]?
+    var authorizedPerson: LoginResponse.Body?
     
     func fetchGroupsData() {
-        worker.fetchAllGroups { [weak self] result in
+        guard let authorizedPerson = authorizedPerson else { return }
+        worker.fetchAllGroups(token: authorizedPerson.accessToken) { [weak self] result in
             guard let self else { return }
             switch result {
             case .success(let allGroupResponse):
