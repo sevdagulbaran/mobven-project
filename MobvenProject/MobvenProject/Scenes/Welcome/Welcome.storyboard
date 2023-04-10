@@ -25,13 +25,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackroundShapeImage" translatesAutoresizingMaskIntoConstraints="NO" id="hBI-s3-Bnd">
-                                <rect key="frame" x="0.0" y="534" width="414" height="370"/>
+                                <rect key="frame" x="0.0" y="526" width="414" height="370"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="370" id="b7K-90-BVh"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgK-xX-OOV">
-                                <rect key="frame" x="30" y="192" width="354" height="42"/>
+                                <rect key="frame" x="30" y="132" width="354" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="xFv-s4-KhS"/>
                                 </constraints>
@@ -40,7 +40,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Kt-zl-I6m">
-                                <rect key="frame" x="30" y="254" width="354" height="42"/>
+                                <rect key="frame" x="30" y="194" width="354" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="H27-BH-abV"/>
                                 </constraints>
@@ -48,58 +48,76 @@
                                 <color key="textColor" name="Blue-Light"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="k9C-oo-SM0">
-                                <rect key="frame" x="336" y="140" width="50" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="R3s-CS-Ty5"/>
-                                    <constraint firstAttribute="width" constant="48" id="g83-7k-eQZ"/>
-                                </constraints>
-                                <color key="onTintColor" name="Purple-Light"/>
-                                <color key="thumbTintColor" name="Blue-Dark"/>
-                                <connections>
-                                    <action selector="changeModeTapped:" destination="j8t-GZ-2bT" eventType="valueChanged" id="NYn-wx-v6O"/>
-                                </connections>
-                            </switch>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WelcomeImage" translatesAutoresizingMaskIntoConstraints="NO" id="YWp-65-In7">
-                                <rect key="frame" x="30" y="330" width="354" height="283"/>
+                                <rect key="frame" x="30" y="270" width="354" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="xJA-HY-m3U"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URD-kM-ixB">
-                                <rect key="frame" x="48" y="688" width="318" height="42"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="jeQ-zu-Wje">
+                                <rect key="frame" x="20" y="490" width="374" height="154"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4I-sa-OPl">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="EKb-3F-pHh"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="SIGN IN" titleAlignment="center">
+                                            <backgroundConfiguration key="background" cornerRadius="16">
+                                                <color key="backgroundColor" name="Purple-Soft"/>
+                                                <color key="strokeColor" name="Blue"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" name="Purple"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="goToSignIn:" destination="j8t-GZ-2bT" eventType="touchUpInside" id="VTA-ff-QlQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URD-kM-ixB">
+                                        <rect key="frame" x="0.0" y="56" width="374" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="u3B-1f-iFb"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="SIGN UP">
+                                            <backgroundConfiguration key="background" cornerRadius="16">
+                                                <color key="backgroundColor" name="Purple-Soft"/>
+                                                <color key="strokeColor" name="Blue"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" name="Purple"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="goToSignUp:" destination="j8t-GZ-2bT" eventType="touchUpInside" id="tzr-TL-noe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3aS-Gw-yyc">
+                                        <rect key="frame" x="0.0" y="112" width="374" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="l89-Kp-oHK"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="VideoPlayer">
+                                            <backgroundConfiguration key="background" cornerRadius="16">
+                                                <color key="backgroundColor" name="Purple-Soft"/>
+                                                <color key="strokeColor" name="Blue"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" name="Purple"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="goToVideoPlayer:" destination="j8t-GZ-2bT" eventType="touchUpInside" id="Lcn-63-W9z"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="u3B-1f-iFb"/>
+                                    <constraint firstItem="URD-kM-ixB" firstAttribute="leading" secondItem="jeQ-zu-Wje" secondAttribute="leading" id="KvR-0E-uwB"/>
+                                    <constraint firstItem="3aS-Gw-yyc" firstAttribute="leading" secondItem="jeQ-zu-Wje" secondAttribute="leading" id="MXz-Rl-2Nb"/>
+                                    <constraint firstAttribute="trailing" secondItem="A4I-sa-OPl" secondAttribute="trailing" id="hyi-CB-Lmm"/>
+                                    <constraint firstAttribute="trailing" secondItem="3aS-Gw-yyc" secondAttribute="trailing" id="kGx-1u-hzP"/>
+                                    <constraint firstItem="A4I-sa-OPl" firstAttribute="leading" secondItem="jeQ-zu-Wje" secondAttribute="leading" id="mBe-AB-6HU"/>
+                                    <constraint firstAttribute="trailing" secondItem="URD-kM-ixB" secondAttribute="trailing" id="nUN-c7-0IC"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="SIGN UP">
-                                    <backgroundConfiguration key="background" cornerRadius="16">
-                                        <color key="backgroundColor" name="Purple-Soft"/>
-                                        <color key="strokeColor" name="Blue"/>
-                                    </backgroundConfiguration>
-                                    <color key="baseForegroundColor" name="Purple"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="goToSignUp:" destination="j8t-GZ-2bT" eventType="touchUpInside" id="tzr-TL-noe"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4I-sa-OPl">
-                                <rect key="frame" x="48" y="626" width="318" height="42"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="EKb-3F-pHh"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="SIGN IN" titleAlignment="center">
-                                    <backgroundConfiguration key="background" cornerRadius="16">
-                                        <color key="backgroundColor" name="Purple-Soft"/>
-                                        <color key="strokeColor" name="Blue"/>
-                                    </backgroundConfiguration>
-                                    <color key="baseForegroundColor" name="Purple"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="goToSignIn:" destination="j8t-GZ-2bT" eventType="touchUpInside" id="VTA-ff-QlQ"/>
-                                </connections>
-                            </button>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CFE-Yq-SQG"/>
                         <color key="backgroundColor" name="White"/>
@@ -107,29 +125,22 @@
                             <constraint firstItem="YWp-65-In7" firstAttribute="leading" secondItem="CFE-Yq-SQG" secondAttribute="leading" constant="30" id="0GI-ya-nXl"/>
                             <constraint firstItem="CFE-Yq-SQG" firstAttribute="trailing" secondItem="2Kt-zl-I6m" secondAttribute="trailing" constant="30" id="0UE-ed-kev"/>
                             <constraint firstItem="YWp-65-In7" firstAttribute="top" secondItem="2Kt-zl-I6m" secondAttribute="bottom" constant="34" id="1vZ-Xo-U8w"/>
-                            <constraint firstItem="A4I-sa-OPl" firstAttribute="top" secondItem="YWp-65-In7" secondAttribute="bottom" constant="13" id="5Ew-tk-uGh"/>
-                            <constraint firstItem="A4I-sa-OPl" firstAttribute="leading" secondItem="CFE-Yq-SQG" secondAttribute="leading" constant="48" id="7aj-uJ-pJb"/>
-                            <constraint firstItem="CFE-Yq-SQG" firstAttribute="trailing" secondItem="A4I-sa-OPl" secondAttribute="trailing" constant="48" id="BNe-UO-lOn"/>
+                            <constraint firstItem="jeQ-zu-Wje" firstAttribute="leading" secondItem="CFE-Yq-SQG" secondAttribute="leading" constant="20" id="9BA-bt-sZY"/>
                             <constraint firstAttribute="bottom" secondItem="hBI-s3-Bnd" secondAttribute="bottom" id="GmL-VM-YPo"/>
-                            <constraint firstItem="URD-kM-ixB" firstAttribute="leading" secondItem="CFE-Yq-SQG" secondAttribute="leading" constant="48" id="RYZ-ke-Kfi"/>
-                            <constraint firstItem="CFE-Yq-SQG" firstAttribute="trailing" secondItem="URD-kM-ixB" secondAttribute="trailing" constant="48" id="S1w-ck-RV5"/>
+                            <constraint firstItem="CFE-Yq-SQG" firstAttribute="trailing" secondItem="jeQ-zu-Wje" secondAttribute="trailing" constant="20" id="MjG-dJ-8HO"/>
                             <constraint firstItem="CFE-Yq-SQG" firstAttribute="trailing" secondItem="hBI-s3-Bnd" secondAttribute="trailing" id="Zq4-1z-ium"/>
                             <constraint firstItem="2Kt-zl-I6m" firstAttribute="leading" secondItem="CFE-Yq-SQG" secondAttribute="leading" constant="30" id="cLK-wK-DHA"/>
+                            <constraint firstItem="jeQ-zu-Wje" firstAttribute="top" secondItem="YWp-65-In7" secondAttribute="bottom" constant="20" id="ejF-2M-Rki"/>
                             <constraint firstItem="hBI-s3-Bnd" firstAttribute="leading" secondItem="CFE-Yq-SQG" secondAttribute="leading" id="hqX-8q-lXP"/>
                             <constraint firstItem="CFE-Yq-SQG" firstAttribute="trailing" secondItem="YWp-65-In7" secondAttribute="trailing" constant="30" id="kMU-F3-PkD"/>
                             <constraint firstItem="2Kt-zl-I6m" firstAttribute="top" secondItem="wgK-xX-OOV" secondAttribute="bottom" constant="20" id="nzW-Jh-FcP"/>
-                            <constraint firstItem="wgK-xX-OOV" firstAttribute="top" secondItem="CFE-Yq-SQG" secondAttribute="top" constant="100" id="obp-xc-pKc"/>
+                            <constraint firstItem="wgK-xX-OOV" firstAttribute="top" secondItem="CFE-Yq-SQG" secondAttribute="top" constant="40" id="obp-xc-pKc"/>
                             <constraint firstItem="CFE-Yq-SQG" firstAttribute="trailing" secondItem="wgK-xX-OOV" secondAttribute="trailing" constant="30" id="p6h-oc-8zz"/>
-                            <constraint firstItem="URD-kM-ixB" firstAttribute="top" secondItem="A4I-sa-OPl" secondAttribute="bottom" constant="20" id="rSj-b5-nOg"/>
-                            <constraint firstItem="CFE-Yq-SQG" firstAttribute="bottom" secondItem="URD-kM-ixB" secondAttribute="bottom" constant="140" id="uCA-Lm-Won"/>
-                            <constraint firstItem="k9C-oo-SM0" firstAttribute="top" secondItem="CFE-Yq-SQG" secondAttribute="top" constant="48" id="vse-5Z-2cj"/>
                             <constraint firstItem="wgK-xX-OOV" firstAttribute="leading" secondItem="CFE-Yq-SQG" secondAttribute="leading" constant="30" id="wPs-Be-g9g"/>
-                            <constraint firstItem="CFE-Yq-SQG" firstAttribute="trailing" secondItem="k9C-oo-SM0" secondAttribute="trailing" constant="30" id="yfz-Av-QH0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cXQ-xg-EBN"/>
                     <connections>
-                        <outlet property="modeSwitch" destination="k9C-oo-SM0" id="bpJ-aW-jKB"/>
                         <outlet property="signInButton" destination="A4I-sa-OPl" id="DaO-9W-X7Y"/>
                         <outlet property="signUpButton" destination="URD-kM-ixB" id="olA-xg-aY3"/>
                     </connections>
@@ -163,17 +174,11 @@
         <namedColor name="Blue">
             <color red="0.38823529411764707" green="0.37254901960784315" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="Blue-Dark">
-            <color red="0.10196078431372549" green="0.066666666666666666" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="Blue-Light">
             <color red="0.52156862745098043" green="0.49803921568627452" blue="0.70588235294117652" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Purple">
             <color red="0.59607843137254901" green="0.32156862745098042" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Purple-Light">
-            <color red="0.90980392156862744" green="0.89803921568627454" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Purple-Soft">
             <color red="0.96078431372549022" green="0.95686274509803926" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

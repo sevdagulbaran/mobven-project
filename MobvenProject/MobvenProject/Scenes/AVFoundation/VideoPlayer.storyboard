@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Video Player View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="VideoPlayerViewController" id="Y6W-OH-hqX" customClass="VideoPlayerViewController" customModule="MobvenProjectDev" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H6B-GW-T6H">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7I5-af-yNf">
+                                <rect key="frame" x="0.0" y="103" width="393" height="393"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="393" id="cCp-lL-za3"/>
+                                    <constraint firstAttribute="width" constant="393" id="tex-De-IgI"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XPG-rt-xQL">
+                                <rect key="frame" x="20" y="763.66666666666663" width="353" height="34.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61w-Zq-UbD">
+                                        <rect key="frame" x="0.0" y="0.0" width="111" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="&lt;&lt;">
+                                            <color key="baseForegroundColor" name="Blue-Dark"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="backButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ZuF-NP-Dq4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkK-S5-HTu">
+                                        <rect key="frame" x="121" y="0.0" width="111" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Play">
+                                            <color key="baseForegroundColor" name="Blue-Dark"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="playButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="LoB-UN-PBa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U6P-YR-T6m">
+                                        <rect key="frame" x="242" y="0.0" width="111" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="&gt;&gt;">
+                                            <color key="baseForegroundColor" name="Blue-Dark"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="forwardButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="RSK-ui-vqa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zvO-V2-gZa">
+                                <rect key="frame" x="-2" y="728.66666666666663" width="397" height="31"/>
+                                <connections>
+                                    <action selector="timeSliderAction:" destination="Y6W-OH-hqX" eventType="valueChanged" id="iWP-Ox-TXh"/>
+                                </connections>
+                            </slider>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3VK-qs-CPl">
+                                <rect key="frame" x="139.66666666666663" y="654.33333333333337" width="243.33333333333337" height="34.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g70-Ov-rZZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="116.66666666666667" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="SpeedDown">
+                                            <color key="baseForegroundColor" name="Blue-Dark"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="speedDownButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="7SH-e7-TDr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5UW-7p-0yJ">
+                                        <rect key="frame" x="126.66666666666666" y="0.0" width="116.66666666666666" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="SpeedUp">
+                                            <color key="baseForegroundColor" name="Blue-Dark"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="speedUpButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="4Im-vF-ghA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRZ-jH-n2h">
+                                <rect key="frame" x="9.9999999999999964" y="521" width="44.666666666666657" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="4hi-ZU-CcG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="Blue-Dark"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="R9S-Zc-Z7K"/>
+                        <color key="backgroundColor" name="White"/>
+                        <constraints>
+                            <constraint firstItem="7I5-af-yNf" firstAttribute="top" secondItem="R9S-Zc-Z7K" secondAttribute="top" constant="44" id="C07-7y-Ha6"/>
+                            <constraint firstItem="R9S-Zc-Z7K" firstAttribute="trailing" secondItem="zvO-V2-gZa" secondAttribute="trailing" id="CdA-Kq-VKj"/>
+                            <constraint firstItem="7I5-af-yNf" firstAttribute="leading" secondItem="R9S-Zc-Z7K" secondAttribute="leading" id="GVv-lU-ZyN"/>
+                            <constraint firstItem="R9S-Zc-Z7K" firstAttribute="trailing" secondItem="3VK-qs-CPl" secondAttribute="trailing" constant="10" id="PSp-XJ-dIM"/>
+                            <constraint firstItem="7I5-af-yNf" firstAttribute="trailing" secondItem="R9S-Zc-Z7K" secondAttribute="trailing" id="RwQ-zM-ly4"/>
+                            <constraint firstItem="bRZ-jH-n2h" firstAttribute="top" secondItem="7I5-af-yNf" secondAttribute="bottom" constant="25" id="Zu6-Mr-yTP"/>
+                            <constraint firstItem="R9S-Zc-Z7K" firstAttribute="bottom" secondItem="XPG-rt-xQL" secondAttribute="bottom" constant="20" id="cNy-1i-TAP"/>
+                            <constraint firstItem="XPG-rt-xQL" firstAttribute="top" secondItem="zvO-V2-gZa" secondAttribute="bottom" constant="5" id="dz4-9B-SZc"/>
+                            <constraint firstItem="R9S-Zc-Z7K" firstAttribute="trailing" secondItem="XPG-rt-xQL" secondAttribute="trailing" constant="20" id="fOq-7l-WZa"/>
+                            <constraint firstItem="zvO-V2-gZa" firstAttribute="leading" secondItem="R9S-Zc-Z7K" secondAttribute="leading" id="fkf-BY-DZp"/>
+                            <constraint firstItem="XPG-rt-xQL" firstAttribute="leading" secondItem="R9S-Zc-Z7K" secondAttribute="leading" constant="20" id="oXd-Pw-frf"/>
+                            <constraint firstItem="zvO-V2-gZa" firstAttribute="top" secondItem="3VK-qs-CPl" secondAttribute="bottom" constant="40" id="obv-T4-GwT"/>
+                            <constraint firstItem="bRZ-jH-n2h" firstAttribute="leading" secondItem="R9S-Zc-Z7K" secondAttribute="leading" constant="10" id="tCd-ao-4GC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="durationLabel" destination="bRZ-jH-n2h" id="4oF-MC-exR"/>
+                        <outlet property="playerView" destination="7I5-af-yNf" id="Mv4-Ey-MTU"/>
+                        <outlet property="timeSlider" destination="zvO-V2-gZa" id="cPD-xs-Xna"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="58" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Blue-Dark">
+            <color red="0.10196078431372549" green="0.066666666666666666" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
