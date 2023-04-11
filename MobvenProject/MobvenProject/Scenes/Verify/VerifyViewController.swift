@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CommonButton
 
 protocol VerifyDisplayLogic: AnyObject {
     
@@ -24,6 +25,7 @@ final class VerifyViewController: UIViewController, VerifyDisplayLogic {
     @IBOutlet private weak var fourthDigitField: UITextField!
     @IBOutlet private weak var scrollView: UIScrollView!
     
+    @IBOutlet weak var routeButton: CommonButton!
     private var otpCode: String = ""
     
     //MARK: - LifeCycle

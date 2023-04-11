@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CommonButton
 
 protocol RegisterDisplayLogic: AnyObject {
     
@@ -23,7 +24,8 @@ final class RegisterViewController: UIViewController, RegisterDisplayLogic {
     @IBOutlet private weak var profileImageView: UIImageView!
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var nameTextField: UITextField!
-    @IBOutlet private weak var saveButton: UIButton!
+    @IBOutlet weak var saveButton: CommonButton!
+   
     
     //MARK: - Lifecycle
     

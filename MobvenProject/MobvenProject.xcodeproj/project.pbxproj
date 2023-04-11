@@ -27,6 +27,7 @@
 		526D583F29E437D90040799B /* VideoPlayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 526D583E29E437D90040799B /* VideoPlayer.storyboard */; };
 		526D584529E445690040799B /* DateFormatter+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D584429E445690040799B /* DateFormatter+Ext.swift */; };
 		526D584729E461010040799B /* testVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 526D584629E461000040799B /* testVideo.mp4 */; };
+		526D585029E4C5490040799B /* CommonButton in Frameworks */ = {isa = PBXBuildFile; productRef = 526D584F29E4C5490040799B /* CommonButton */; };
 		5293981A298FC845006D5060 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52939819298FC845006D5060 /* AppDelegate.swift */; };
 		5293981C298FC845006D5060 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5293981B298FC845006D5060 /* SceneDelegate.swift */; };
 		52939821298FC845006D5060 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5293981F298FC845006D5060 /* Main.storyboard */; };
@@ -129,6 +130,7 @@
 		526D583E29E437D90040799B /* VideoPlayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VideoPlayer.storyboard; sourceTree = "<group>"; };
 		526D584429E445690040799B /* DateFormatter+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Ext.swift"; sourceTree = "<group>"; };
 		526D584629E461000040799B /* testVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = testVideo.mp4; sourceTree = "<group>"; };
+		526D584D29E4C4000040799B /* CommonButton */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CommonButton; path = MobvenProject/CommonButton; sourceTree = "<group>"; };
 		52939816298FC845006D5060 /* MobvenProjectDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobvenProjectDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52939819298FC845006D5060 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5293981B298FC845006D5060 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				526D585029E4C5490040799B /* CommonButton in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,14 +318,31 @@
 			path = AVFoundation;
 			sourceTree = "<group>";
 		};
+		526D584829E4C2160040799B /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				526D584D29E4C4000040799B /* CommonButton */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		526D584E29E4C5490040799B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5293980D298FC845006D5060 = {
 			isa = PBXGroup;
 			children = (
+				526D584829E4C2160040799B /* Packages */,
 				52939849298FC851006D5060 /* Configuration */,
 				52939818298FC845006D5060 /* MobvenProject */,
 				5293982F298FC848006D5060 /* MobvenProjectTests */,
 				52939839298FC848006D5060 /* MobvenProjectUITests */,
 				52939817298FC845006D5060 /* Products */,
+				526D584E29E4C5490040799B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -558,6 +578,9 @@
 			dependencies = (
 			);
 			name = MobvenProject;
+			packageProductDependencies = (
+				526D584F29E4C5490040799B /* CommonButton */,
+			);
 			productName = MobvenProject;
 			productReference = 52939816298FC845006D5060 /* MobvenProjectDev.app */;
 			productType = "com.apple.product-type.application";
@@ -1360,6 +1383,13 @@
 			defaultConfigurationName = DevelopmentRelease;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		526D584F29E4C5490040799B /* CommonButton */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CommonButton;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5293980E298FC845006D5060 /* Project object */;
 }

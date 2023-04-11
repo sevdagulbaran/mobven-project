@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import CommonButton
+
 protocol LoginDisplayLogic: AnyObject {
     func displayAuthorizedPerson(viewModel: Login.Fetch.ViewModel)
 }
@@ -25,7 +27,7 @@ final class LoginViewController: UIViewController {
     @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet private weak var termsLabel: UILabel!
-    @IBOutlet private weak var saveButton: UIButton!
+    @IBOutlet private weak var saveButton: CommonButton!
     
     // MARK: Object lifecycle
     
@@ -93,7 +95,7 @@ final class LoginViewController: UIViewController {
     
     //MARK: - Actions
     
-    @IBAction private func saveNumberTapped(_ sender: UIButton) {
+    @IBAction private func loginButtonTapped(_ sender: UIButton) {
         guard let email = emailTextField.text, !email.isEmpty,
                    let password = passwordTextField.text, !password.isEmpty else {
             showAlert(message: "Email or password is incorrect.")

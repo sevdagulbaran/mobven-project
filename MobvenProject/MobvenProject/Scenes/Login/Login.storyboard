@@ -119,7 +119,7 @@ our Terms and Condition</string>
                     <connections>
                         <outlet property="emailTextField" destination="E9i-PM-4nd" id="ZGS-UO-h1E"/>
                         <outlet property="passwordTextField" destination="Zdx-ck-HS3" id="gn4-VQ-HV0"/>
-                        <outlet property="saveButton" destination="F20-lY-XJ2" id="2rW-Y2-Lzu"/>
+                        <outlet property="saveButton" destination="F20-lY-XJ2" id="G4U-Fp-zAY"/>
                         <outlet property="termsLabel" destination="ifj-8t-MDZ" id="gnt-Zd-cld"/>
                     </connections>
                 </viewController>
