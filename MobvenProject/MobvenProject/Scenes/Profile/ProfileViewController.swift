@@ -14,7 +14,7 @@ protocol ProfileDisplayLogic: AnyObject {
 
 final class ProfileViewController: UIViewController {
     
-    // MARK: Property
+    // MARK: Properties
     
     @IBOutlet private weak var modeSwitch: UISwitch!
     
@@ -91,7 +91,7 @@ final class ProfileViewController: UIViewController {
     }
     //MARK: - Actions
     
-    @IBAction func openLinkedinButtonTapped(_ sender: Any) {
+    @IBAction private func openLinkedinButtonTapped(_ sender: Any) {
         let url = URL(string: "https://www.linkedin.com/in/sevdagulbaran")
         router?.goToWebView(url: url)
     }
