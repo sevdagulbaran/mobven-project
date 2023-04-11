@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xAc-7A-1ia">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Welcome View Controller-->
+        <scene sceneID="auR-Tn-7e3">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeViewController" id="j8t-GZ-2bT" customClass="WelcomeViewController" customModule="MobvenProjectDev" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rOX-Bg-GSi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackroundShapeImage" translatesAutoresizingMaskIntoConstraints="NO" id="hBI-s3-Bnd">
+                                <rect key="frame" x="0.0" y="526" width="414" height="370"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="370" id="b7K-90-BVh"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgK-xX-OOV">
+                                <rect key="frame" x="30" y="132" width="354" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="xFv-s4-KhS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="29"/>
+                                <color key="textColor" name="Purple"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Kt-zl-I6m">
+                                <rect key="frame" x="30" y="194" width="354" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="H27-BH-abV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
+                                <color key="textColor" name="Blue-Light"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WelcomeImage" translatesAutoresizingMaskIntoConstraints="NO" id="YWp-65-In7">
+                                <rect key="frame" x="30" y="270" width="354" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="xJA-HY-m3U"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="jeQ-zu-Wje">
+                                <rect key="frame" x="20" y="490" width="374" height="154"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4I-sa-OPl">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="EKb-3F-pHh"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="SIGN IN" titleAlignment="center">
+                                            <backgroundConfiguration key="background" cornerRadius="16">
+                                                <color key="backgroundColor" name="Purple-Soft"/>
+                                                <color key="strokeColor" name="Blue"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" name="Purple"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="goToSignIn:" destination="j8t-GZ-2bT" eventType="touchUpInside" id="VTA-ff-QlQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URD-kM-ixB">
+                                        <rect key="frame" x="0.0" y="56" width="374" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="u3B-1f-iFb"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="SIGN UP">
+                                            <backgroundConfiguration key="background" cornerRadius="16">
+                                                <color key="backgroundColor" name="Purple-Soft"/>
+                                                <color key="strokeColor" name="Blue"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" name="Purple"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="goToSignUp:" destination="j8t-GZ-2bT" eventType="touchUpInside" id="tzr-TL-noe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3aS-Gw-yyc">
+                                        <rect key="frame" x="0.0" y="112" width="374" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="l89-Kp-oHK"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="VideoPlayer">
+                                            <backgroundConfiguration key="background" cornerRadius="16">
+                                                <color key="backgroundColor" name="Purple-Soft"/>
+                                                <color key="strokeColor" name="Blue"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" name="Purple"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="goToVideoPlayer:" destination="j8t-GZ-2bT" eventType="touchUpInside" id="Lcn-63-W9z"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="URD-kM-ixB" firstAttribute="leading" secondItem="jeQ-zu-Wje" secondAttribute="leading" id="KvR-0E-uwB"/>
+                                    <constraint firstItem="3aS-Gw-yyc" firstAttribute="leading" secondItem="jeQ-zu-Wje" secondAttribute="leading" id="MXz-Rl-2Nb"/>
+                                    <constraint firstAttribute="trailing" secondItem="A4I-sa-OPl" secondAttribute="trailing" id="hyi-CB-Lmm"/>
+                                    <constraint firstAttribute="trailing" secondItem="3aS-Gw-yyc" secondAttribute="trailing" id="kGx-1u-hzP"/>
+                                    <constraint firstItem="A4I-sa-OPl" firstAttribute="leading" secondItem="jeQ-zu-Wje" secondAttribute="leading" id="mBe-AB-6HU"/>
+                                    <constraint firstAttribute="trailing" secondItem="URD-kM-ixB" secondAttribute="trailing" id="nUN-c7-0IC"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CFE-Yq-SQG"/>
+                        <color key="backgroundColor" name="White"/>
+                        <constraints>
+                            <constraint firstItem="YWp-65-In7" firstAttribute="leading" secondItem="CFE-Yq-SQG" secondAttribute="leading" constant="30" id="0GI-ya-nXl"/>
+                            <constraint firstItem="CFE-Yq-SQG" firstAttribute="trailing" secondItem="2Kt-zl-I6m" secondAttribute="trailing" constant="30" id="0UE-ed-kev"/>
+                            <constraint firstItem="YWp-65-In7" firstAttribute="top" secondItem="2Kt-zl-I6m" secondAttribute="bottom" constant="34" id="1vZ-Xo-U8w"/>
+                            <constraint firstItem="jeQ-zu-Wje" firstAttribute="leading" secondItem="CFE-Yq-SQG" secondAttribute="leading" constant="20" id="9BA-bt-sZY"/>
+                            <constraint firstAttribute="bottom" secondItem="hBI-s3-Bnd" secondAttribute="bottom" id="GmL-VM-YPo"/>
+                            <constraint firstItem="CFE-Yq-SQG" firstAttribute="trailing" secondItem="jeQ-zu-Wje" secondAttribute="trailing" constant="20" id="MjG-dJ-8HO"/>
+                            <constraint firstItem="CFE-Yq-SQG" firstAttribute="trailing" secondItem="hBI-s3-Bnd" secondAttribute="trailing" id="Zq4-1z-ium"/>
+                            <constraint firstItem="2Kt-zl-I6m" firstAttribute="leading" secondItem="CFE-Yq-SQG" secondAttribute="leading" constant="30" id="cLK-wK-DHA"/>
+                            <constraint firstItem="jeQ-zu-Wje" firstAttribute="top" secondItem="YWp-65-In7" secondAttribute="bottom" constant="20" id="ejF-2M-Rki"/>
+                            <constraint firstItem="hBI-s3-Bnd" firstAttribute="leading" secondItem="CFE-Yq-SQG" secondAttribute="leading" id="hqX-8q-lXP"/>
+                            <constraint firstItem="CFE-Yq-SQG" firstAttribute="trailing" secondItem="YWp-65-In7" secondAttribute="trailing" constant="30" id="kMU-F3-PkD"/>
+                            <constraint firstItem="2Kt-zl-I6m" firstAttribute="top" secondItem="wgK-xX-OOV" secondAttribute="bottom" constant="20" id="nzW-Jh-FcP"/>
+                            <constraint firstItem="wgK-xX-OOV" firstAttribute="top" secondItem="CFE-Yq-SQG" secondAttribute="top" constant="40" id="obp-xc-pKc"/>
+                            <constraint firstItem="CFE-Yq-SQG" firstAttribute="trailing" secondItem="wgK-xX-OOV" secondAttribute="trailing" constant="30" id="p6h-oc-8zz"/>
+                            <constraint firstItem="wgK-xX-OOV" firstAttribute="leading" secondItem="CFE-Yq-SQG" secondAttribute="leading" constant="30" id="wPs-Be-g9g"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cXQ-xg-EBN"/>
+                    <connections>
+                        <outlet property="signInButton" destination="A4I-sa-OPl" id="DaO-9W-X7Y"/>
+                        <outlet property="signUpButton" destination="URD-kM-ixB" id="olA-xg-aY3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5kj-gD-cP9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1485.5072463768117" y="-256.47321428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fSQ-2h-GUp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xAc-7A-1ia" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Y3h-2W-ScF">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="j8t-GZ-2bT" kind="relationship" relationship="rootViewController" id="mf4-z3-xTH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V3l-I5-yfC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="575.36231884057975" y="-256.47321428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BackroundShapeImage" width="375" height="470"/>
+        <image name="WelcomeImage" width="375" height="283"/>
+        <namedColor name="Blue">
+            <color red="0.38823529411764707" green="0.37254901960784315" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Blue-Light">
+            <color red="0.52156862745098043" green="0.49803921568627452" blue="0.70588235294117652" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Purple">
+            <color red="0.59607843137254901" green="0.32156862745098042" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Purple-Soft">
+            <color red="0.96078431372549022" green="0.95686274509803926" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
