@@ -52,13 +52,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kK-oA-tti">
-                                <rect key="frame" x="30" y="421" width="37" height="15"/>
+                                <rect key="frame" x="30" y="421" width="32" height="14"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5sB-Vu-TzM">
-                                <rect key="frame" x="30" y="443" width="354" height="50"/>
+                                <rect key="frame" x="30" y="442" width="354" height="50"/>
                                 <color key="backgroundColor" name="Purple-Soft"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="1iE-wC-1SZ"/>
@@ -66,14 +66,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLH-yg-a3y">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLH-yg-a3y" customClass="CommonButton" customModule="CommonButton">
                                 <rect key="frame" x="320" y="772" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="AB1-i9-Qm6"/>
                                     <constraint firstAttribute="width" constant="60" id="MRl-xR-1op"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="SaveButtonIcon"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
                                 <connections>
                                     <action selector="saveAccountInformationTapped:" destination="6i2-6p-K6Z" eventType="touchUpInside" id="lU5-0A-V8g"/>
                                 </connections>
@@ -109,19 +109,18 @@
                         <outlet property="nameLabel" destination="5kK-oA-tti" id="oqL-bU-6nF"/>
                         <outlet property="nameTextField" destination="5sB-Vu-TzM" id="hCA-pO-sA6"/>
                         <outlet property="profileImageView" destination="gng-Xd-7ND" id="Teg-WE-ntH"/>
-                        <outlet property="saveButton" destination="vLH-yg-a3y" id="K4d-dc-Ifc"/>
+                        <outlet property="saveButton" destination="vLH-yg-a3y" id="N9b-jL-5ez"/>
                         <outlet property="subTitleLabel" destination="u8K-ll-umY" id="7ek-gx-t0Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OVL-ea-Tmd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2184" y="371"/>
+            <point key="canvasLocation" x="2182.608695652174" y="370.98214285714283"/>
         </scene>
     </scenes>
     <resources>
         <image name="BackroundShapeImage" width="375" height="470"/>
         <image name="CameraImage" width="120" height="120"/>
-        <image name="SaveButtonIcon" width="120" height="107"/>
         <namedColor name="Blue-Dark">
             <color red="0.10196078431372549" green="0.066666666666666666" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -10,6 +10,7 @@ import UIKit
 protocol WelcomeRoutingLogic: AnyObject {
     func goToSignIn()
     func goToSignUp()
+    func goToVideoPlayer()
 }
 
 protocol WelcomeDataPassing: AnyObject {
@@ -34,6 +35,15 @@ final class WelcomeRouter: WelcomeRoutingLogic, WelcomeDataPassing {
         let storyBoard = UIStoryboard(name: "Register", bundle: nil)
         
         guard let destinationViewController = storyBoard.instantiateViewController(withIdentifier: "RegisterViewController") as? RegisterViewController else {
+            return
+        }
+        viewController?.navigationController?.pushViewController(destinationViewController, animated: true)
+    }
+    
+    func goToVideoPlayer() {
+        let storyBoard = UIStoryboard(name: "VideoPlayer", bundle: nil)
+        
+        guard let destinationViewController = storyBoard.instantiateViewController(withIdentifier: "VideoPlayerViewController") as? VideoPlayerViewController else {
             return
         }
         viewController?.navigationController?.pushViewController(destinationViewController, animated: true)

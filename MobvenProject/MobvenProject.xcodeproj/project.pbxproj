@@ -23,6 +23,11 @@
 		524DA4B129C4E407003C49C2 /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524DA4B029C4E407003C49C2 /* UIImageView+Ext.swift */; };
 		524E8AB129BF938F00E05337 /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E8AB029BF938F00E05337 /* RequestMethod.swift */; };
 		524E8AB329BF946400E05337 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E8AB229BF946400E05337 /* RequestError.swift */; };
+		526D583C29E437710040799B /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D583A29E437710040799B /* VideoPlayerViewController.swift */; };
+		526D583F29E437D90040799B /* VideoPlayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 526D583E29E437D90040799B /* VideoPlayer.storyboard */; };
+		526D584529E445690040799B /* DateFormatter+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D584429E445690040799B /* DateFormatter+Ext.swift */; };
+		526D584729E461010040799B /* testVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 526D584629E461000040799B /* testVideo.mp4 */; };
+		526D585029E4C5490040799B /* CommonButton in Frameworks */ = {isa = PBXBuildFile; productRef = 526D584F29E4C5490040799B /* CommonButton */; };
 		5293981A298FC845006D5060 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52939819298FC845006D5060 /* AppDelegate.swift */; };
 		5293981C298FC845006D5060 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5293981B298FC845006D5060 /* SceneDelegate.swift */; };
 		52939821298FC845006D5060 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5293981F298FC845006D5060 /* Main.storyboard */; };
@@ -121,6 +126,11 @@
 		524DA4B029C4E407003C49C2 /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
 		524E8AB029BF938F00E05337 /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
 		524E8AB229BF946400E05337 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
+		526D583A29E437710040799B /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
+		526D583E29E437D90040799B /* VideoPlayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VideoPlayer.storyboard; sourceTree = "<group>"; };
+		526D584429E445690040799B /* DateFormatter+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Ext.swift"; sourceTree = "<group>"; };
+		526D584629E461000040799B /* testVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = testVideo.mp4; sourceTree = "<group>"; };
+		526D584D29E4C4000040799B /* CommonButton */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CommonButton; path = MobvenProject/CommonButton; sourceTree = "<group>"; };
 		52939816298FC845006D5060 /* MobvenProjectDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobvenProjectDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52939819298FC845006D5060 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5293981B298FC845006D5060 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -196,6 +206,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				526D585029E4C5490040799B /* CommonButton in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,14 +309,40 @@
 			path = Verify;
 			sourceTree = "<group>";
 		};
+		526D583929E4370D0040799B /* AVFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				526D583A29E437710040799B /* VideoPlayerViewController.swift */,
+				526D583E29E437D90040799B /* VideoPlayer.storyboard */,
+			);
+			path = AVFoundation;
+			sourceTree = "<group>";
+		};
+		526D584829E4C2160040799B /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				526D584D29E4C4000040799B /* CommonButton */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		526D584E29E4C5490040799B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5293980D298FC845006D5060 = {
 			isa = PBXGroup;
 			children = (
+				526D584829E4C2160040799B /* Packages */,
 				52939849298FC851006D5060 /* Configuration */,
 				52939818298FC845006D5060 /* MobvenProject */,
 				5293982F298FC848006D5060 /* MobvenProjectTests */,
 				52939839298FC848006D5060 /* MobvenProjectUITests */,
 				52939817298FC845006D5060 /* Products */,
+				526D584E29E4C5490040799B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -322,6 +359,7 @@
 		52939818298FC845006D5060 /* MobvenProject */ = {
 			isa = PBXGroup;
 			children = (
+				526D584629E461000040799B /* testVideo.mp4 */,
 				52939854298FD01E006D5060 /* App */,
 				524E8AAF29BF937300E05337 /* Networking */,
 				52DC3A4729BD06CF00FB4228 /* Utils */,
@@ -381,6 +419,7 @@
 		52939856298FD047006D5060 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				526D583929E4370D0040799B /* AVFoundation */,
 				521DB49D29E35D7700F5F567 /* Profile */,
 				52D00BD429C27CA40048FF5F /* Home */,
 				525BFEC029BFB16900929FC0 /* Verify */,
@@ -466,6 +505,7 @@
 				52DC3A4D29BD501E00FB4228 /* UIViewController+Ext.swift */,
 				529F425629BEFBED00B27CD1 /* UIView+Ext.swift */,
 				524DA4B029C4E407003C49C2 /* UIImageView+Ext.swift */,
+				526D584429E445690040799B /* DateFormatter+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -538,6 +578,9 @@
 			dependencies = (
 			);
 			name = MobvenProject;
+			packageProductDependencies = (
+				526D584F29E4C5490040799B /* CommonButton */,
+			);
 			productName = MobvenProject;
 			productReference = 52939816298FC845006D5060 /* MobvenProjectDev.app */;
 			productType = "com.apple.product-type.application";
@@ -627,6 +670,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52D00BA729C1FE070048FF5F /* Login.storyboard in Resources */,
+				526D583F29E437D90040799B /* VideoPlayer.storyboard in Resources */,
 				52E21F3D29BA8AD50086553E /* Montserrat-Bold.ttf in Resources */,
 				521DB4B629E362FA00F5F567 /* WebView.storyboard in Resources */,
 				52939826298FC847006D5060 /* LaunchScreen.storyboard in Resources */,
@@ -636,6 +680,7 @@
 				52D00BB529C2330E0048FF5F /* Welcome.storyboard in Resources */,
 				52939823298FC847006D5060 /* Assets.xcassets in Resources */,
 				524AF11D29C2FC7F00F50BEF /* HomeTableViewCell.xib in Resources */,
+				526D584729E461010040799B /* testVideo.mp4 in Resources */,
 				52E6345C29E3688C00F7BCEF /* Profile.storyboard in Resources */,
 				52E21F3E29BA8ADC0086553E /* Montserrat-Medium.ttf in Resources */,
 				52D00BCD29C235920048FF5F /* Verify.storyboard in Resources */,
@@ -672,6 +717,7 @@
 				52D00BB629C2330E0048FF5F /* WelcomePresenter.swift in Sources */,
 				521DB4BB29E362FA00F5F567 /* WebViewWorker.swift in Sources */,
 				52D00BA929C1FE070048FF5F /* LoginPresenter.swift in Sources */,
+				526D584529E445690040799B /* DateFormatter+Ext.swift in Sources */,
 				52E6345F29E3688C00F7BCEF /* ProfileInteractor.swift in Sources */,
 				52E6345D29E3688C00F7BCEF /* ProfileViewController.swift in Sources */,
 				52D00BDD29C27CB50048FF5F /* HomeViewController.swift in Sources */,
@@ -723,6 +769,7 @@
 				52D00BAD29C1FE070048FF5F /* LoginRouter.swift in Sources */,
 				52D00BD129C235920048FF5F /* VerifyWorker.swift in Sources */,
 				52E6346229E3688C00F7BCEF /* ProfileRouter.swift in Sources */,
+				526D583C29E437710040799B /* VideoPlayerViewController.swift in Sources */,
 				52DC3A4C29BD3CB100FB4228 /* VerifyViewController.swift in Sources */,
 				52D00BE029C27CB60048FF5F /* HomeModels.swift in Sources */,
 			);
@@ -1336,6 +1383,13 @@
 			defaultConfigurationName = DevelopmentRelease;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		526D584F29E4C5490040799B /* CommonButton */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CommonButton;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5293980E298FC845006D5060 /* Project object */;
 }
