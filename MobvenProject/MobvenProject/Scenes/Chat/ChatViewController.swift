@@ -33,7 +33,7 @@ final class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-          
+        
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -149,8 +149,14 @@ extension ChatViewController: UICollectionViewDelegate, UICollectionViewDataSour
             withReuseIdentifier: "ChatCollectionViewCell",
             for: indexPath
         ) as? ChatCollectionViewCell else { return UICollectionViewCell() }
-        guard images != nil else { return cell }
+        guard let images else { return cell }
         
+        cell.moreImagesView.isHidden = true
+        
+        if indexPath.item == 3, images.count > 4 {
+            cell.moreImagesView.isHidden = false
+        }
+        cell.selectedImageView.image = images[indexPath.item]
         return cell
     }
 }

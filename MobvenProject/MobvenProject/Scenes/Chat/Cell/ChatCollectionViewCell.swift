@@ -7,8 +7,12 @@
 
 import UIKit
 
-class ChatCollectionViewCell: UICollectionViewCell {
+final class ChatCollectionViewCell: UICollectionViewCell {
+    // MARK: - Properties
 
+    @IBOutlet var selectedImageView: UIImageView!
+    @IBOutlet var moreImagesView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
