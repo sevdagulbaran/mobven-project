@@ -172,15 +172,16 @@ extension ChatViewController {
             widthDimension: .fractionalWidth(1),
             heightDimension: .fractionalHeight(1)
         )
-        
+
         let group = NSCollectionLayoutGroup.horizontal(
             layoutSize: groupSize,
-            subitem: item,
+            repeatingSubitem: item,
             count: 1
         )
         let section = NSCollectionLayoutSection(group: group)
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
+        
     }
     
     private func setupTwoCompositionalLayout() -> UICollectionViewLayout {

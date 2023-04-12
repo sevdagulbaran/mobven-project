@@ -89,6 +89,18 @@ extension WebViewViewController: WKNavigationDelegate {
         backButton.isEnabled = webView.canGoBack
         forwardButton.isEnabled = webView.canGoForward
     }
+    
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        guard let url = navigationAction.request.url else {
+            return decisionHandler(.cancel)
+        }
+        
+        if ["mailto", "tel"].contains(url.scheme) {
+            UIApplication.shared.open(url)
+            return decisionHandler(.cancel)
+        }
+        return decisionHandler(url.host == "www.linkedin.com" ? .allow : .cancel)
+    }
 }
 
 extension WebViewViewController: WebViewDisplayLogic {
