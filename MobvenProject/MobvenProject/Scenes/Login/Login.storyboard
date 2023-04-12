@@ -45,7 +45,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="SaveButtonIcon"/>
                                 <connections>
-                                    <action selector="saveNumberTapped:" destination="be7-xY-yCI" eventType="touchUpInside" id="mbG-fK-L1O"/>
+                                    <action selector="loginButtonTapped:" destination="be7-xY-yCI" eventType="touchUpInside" id="Lym-F7-2FN"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vEl-Fs-P68">

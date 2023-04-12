@@ -14,14 +14,15 @@ protocol WebViewDisplayLogic: AnyObject {
 
 final class WebViewViewController: UIViewController {
     
-    var interactor: WebViewBusinessLogic?
-    var router: (WebViewRoutingLogic & WebViewDataPassing)?
-    
+    //MARK: Properties
     
     @IBOutlet private weak var webView: WKWebView!
     @IBOutlet private weak var backButton: UIButton!
     @IBOutlet private weak var forwardButton: UIButton!
     @IBOutlet private weak var refreshButton: UIButton!
+    
+    var interactor: WebViewBusinessLogic?
+    var router: (WebViewRoutingLogic & WebViewDataPassing)?
     
     private let url = URL(string: "https://www.linkedin.com/in/sevdagulbaran")!
     
@@ -62,10 +63,6 @@ final class WebViewViewController: UIViewController {
         router.dataStore = interactor
     }
     private func loadURL(){
-        // sadece linkedin domain icin kullanilabilir
-        
-//        guard let url = url else { return }
-//        guard url.host == "www.linkedin.com" else { return }
         let request = URLRequest(url: url)
         webView.load(request)
         webView.load(URLRequest(url: url))
@@ -74,26 +71,25 @@ final class WebViewViewController: UIViewController {
     
     // MARK: - IBActions
     
-    @IBAction func backButtonTapped(_ sender: Any) {
+    @IBAction private func backButtonTapped(_ sender: Any) {
         webView.goBack()
     }
     
-    @IBAction func forwardButtonTapped(_ sender: Any) {
+    @IBAction private func forwardButtonTapped(_ sender: Any) {
         webView.goForward()
     }
     
-    @IBAction func refreshButtonTapped(_ sender: Any) {
+    @IBAction private func refreshButtonTapped(_ sender: Any) {
         webView.reload()
     }
 }
-
+// MARK: WKNavigationDelegate
 extension WebViewViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         backButton.isEnabled = webView.canGoBack
         forwardButton.isEnabled = webView.canGoForward
     }
 }
-
 
 extension WebViewViewController: WebViewDisplayLogic {
     
