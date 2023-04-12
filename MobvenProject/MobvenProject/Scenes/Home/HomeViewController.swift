@@ -43,8 +43,7 @@ final class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       // navigationController?.isNavigationBarHidden = true
-        
+    
         interactor?.fetchGroupsData()
         setupView()
     }
@@ -134,7 +133,9 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         cell.configureCell(viewModel: model)
         return cell
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        router?.goToChat()
+    }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
